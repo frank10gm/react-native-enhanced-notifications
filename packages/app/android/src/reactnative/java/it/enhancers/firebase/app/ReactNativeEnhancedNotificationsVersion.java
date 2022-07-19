@@ -18,5 +18,5 @@ package it.enhancers.firebase.app;
  */
 // generated file - do not modify or commit
 public class ReactNativeFirebaseVersion {
-  public static String VERSION = "15.1.2";
+  public static String VERSION = "15.1.3";
 }
