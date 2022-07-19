@@ -30,6 +30,6 @@ public class ReactNativeFirebaseAppRegistrar implements ComponentRegistrar {
   public List<Component<?>> getComponents() {
     return Collections.singletonList(
         LibraryVersionComponent.create(
-            "react-native-firebase", ReactNativeFirebaseVersion.VERSION));
+            "react-native-enhanced-notifications", ReactNativeFirebaseVersion.VERSION));
   }
 }

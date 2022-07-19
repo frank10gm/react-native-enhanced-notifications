@@ -1,5 +1,5 @@
 exports.getE2eTestProject = function getE2eTestProject() {
-  return 'react-native-firebase-testing';
+  return 'react-native-enhanced-notifications-testing';
 };
 
 exports.getE2eEmulatorHost = function getE2eEmulatorHost() {

@@ -418,14 +418,14 @@ class FirebaseMessagingModule extends FirebaseModule {
   useServiceWorker() {
     // eslint-disable-next-line no-console
     console.warn(
-      'firebase.messaging().useServiceWorker() is not supported on react-native-firebase.',
+      'firebase.messaging().useServiceWorker() is not supported on react-native-enhanced-notifications.',
     );
   }
 
   usePublicVapidKey() {
     // eslint-disable-next-line no-console
     console.warn(
-      'firebase.messaging().usePublicVapidKey() is not supported on react-native-firebase.',
+      'firebase.messaging().usePublicVapidKey() is not supported on react-native-enhanced-notifications.',
     );
   }
 }

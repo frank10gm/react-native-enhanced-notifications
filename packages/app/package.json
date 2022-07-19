@@ -2,7 +2,7 @@
   "name": "@react-native-enhanced-notifications/app",
   "version": "15.1.3",
   "author": "francesco la placa",
-  "description": "React Native Enhanced Notifications - derived from react-native-firebase with the possibility to integrate third party notification providers",
+  "description": "React Native Enhanced Notifications - derived from rn-firebase with the possibility to integrate third party notification providers",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -34,7 +34,6 @@
     "remote-config",
     "transactions",
     "react-native",
-    "react-native-firebase",
     "firebase",
     "fcm",
     "apn",

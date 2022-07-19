@@ -23,10 +23,10 @@ plugins {
 def appProject
 if (findProject(':@react-native-enhanced-notifications_app')) {
   appProject = project(':@react-native-enhanced-notifications_app')
-} else if (findProject(':react-native-firebase_app')) {
-  appProject = project(':react-native-firebase_app')
+} else if (findProject(':react-native-enhanced-notifications_app')) {
+  appProject = project(':react-native-enhanced-notifications_app')
 } else {
-  throw new GradleException('Could not find the react-native-firebase/app package, have you installed it?')
+  throw new GradleException('Could not find the react-native-enhanced-notifications/app package, have you installed it?')
 }
 def packageJson = PackageJson.getForProject(project)
 def appPackageJson = PackageJson.getForProject(appProject)

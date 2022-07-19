@@ -55,7 +55,7 @@ RCT_EXPORT_MODULE();
 #ifdef REGISTER_LIB
     static dispatch_once_t once;
     dispatch_once(&once, ^{
-      [FIRApp registerLibrary:@"react-native-firebase" withVersion:[RNENVersionString copy]];
+      [FIRApp registerLibrary:@"react-native-enhanced-notifications" withVersion:[RNENVersionString copy]];
     });
 #endif
     if ([[RNENJSON shared] contains:@"app_log_level"]) {

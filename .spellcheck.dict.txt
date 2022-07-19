@@ -133,7 +133,6 @@ programmatically
 PRs
 PubSub
 qa
-react-native-firebase
 react-native-mlkit
 realtime
 Realtime

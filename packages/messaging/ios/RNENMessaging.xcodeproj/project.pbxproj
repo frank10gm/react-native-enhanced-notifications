@@ -280,13 +280,13 @@
 					"$(inherited)",
 					"$(REACT_SEARCH_PATH)/React/**",
 					"$(SRCROOT)/../../react-native/React/**",
-					"$(SRCROOT)/../../react-native-firebase/ios/**",
+					"$(SRCROOT)/../../react-native-enhanced-notifications/ios/**",
 					"$(FIREBASE_SEARCH_PATH)/Firebase/**",
 					"${SRCROOT}/../../../ios/Firebase/**",
 					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
 					"${SRCROOT}/../../../tests/ios/Pods/Headers/Public/**",
 					"$(SRCROOT)/../../../node_modules/react-native/React/**",
-					"$(SRCROOT)/../../../node_modules/react-native-firebase/ios/**",
+					"$(SRCROOT)/../../../node_modules/react-native-enhanced-notifications/ios/**",
 					"$(SRCROOT)/../../../packages/app/ios/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -338,13 +338,13 @@
 					"$(inherited)",
 					"$(REACT_SEARCH_PATH)/React/**",
 					"$(SRCROOT)/../../react-native/React/**",
-					"$(SRCROOT)/../../react-native-firebase/ios/**",
+					"$(SRCROOT)/../../react-native-enhanced-notifications/ios/**",
 					"$(FIREBASE_SEARCH_PATH)/Firebase/**",
 					"${SRCROOT}/../../../ios/Firebase/**",
 					"${SRCROOT}/../../../ios/Pods/Headers/Public/**",
 					"${SRCROOT}/../../../tests/ios/Pods/Headers/Public/**",
 					"$(SRCROOT)/../../../node_modules/react-native/React/**",
-					"$(SRCROOT)/../../../node_modules/react-native-firebase/ios/**",
+					"$(SRCROOT)/../../../node_modules/react-native-enhanced-notifications/ios/**",
 					"$(SRCROOT)/../../../packages/app/ios/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
