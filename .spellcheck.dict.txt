@@ -86,8 +86,6 @@ Intellisense
 IntelliSense
 interstitials
 Interstitials
-invertase
-Invertase
 iOS
 iOS13
 IPs

@@ -177,8 +177,7 @@ function getMissingModuleHelpText(namespace) {
   if (Platform.OS === 'ios') {
     return (
       `You attempted to use a firebase module that's not installed natively on your iOS project by calling ${snippet}.` +
-      '\r\n\r\nEnsure you have either linked the module or added it to your projects Podfile.' +
-      '\r\n\r\nSee http://invertase.link/ios for full setup instructions.'
+      '\r\n\r\nEnsure you have either linked the module or added it to your projects Podfile.'
     );
   }
 
@@ -188,8 +187,7 @@ function getMissingModuleHelpText(namespace) {
   return (
     `You attempted to use a firebase module that's not installed on your Android project by calling ${snippet}.` +
     `\r\n\r\nEnsure you have:\r\n\r\n1) imported the ${rnFirebasePackage} module in your 'MainApplication.java' file.\r\n\r\n2) Added the ` +
-    `${newInstance} line inside of the RN 'getPackages()' method list.` +
-    '\r\n\r\nSee http://invertase.link/android for full setup instructions.'
+    `${newInstance} line inside of the RN 'getPackages()' method list.`
   );
 }
 

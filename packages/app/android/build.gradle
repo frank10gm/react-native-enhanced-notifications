@@ -1,4 +1,4 @@
-import io.invertase.gradle.common.PackageJson
+import it.enhancers.gradle.common.PackageJson
 
 buildscript {
   // The Android Gradle plugin is only required when opening the android folder stand-alone.
@@ -17,7 +17,7 @@ buildscript {
 }
 
 plugins {
-  id "io.invertase.gradle.build" version "1.5"
+  id "it.enhancers.gradle.build" version "1.5"
 }
 
 def packageJson = PackageJson.getForProject(project)

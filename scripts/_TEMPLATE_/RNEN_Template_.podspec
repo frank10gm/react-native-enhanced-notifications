@@ -16,11 +16,11 @@ Pod::Spec.new do |s|
   s.summary             = <<-DESC
                             A well tested feature rich Firebase implementation for React Native, supporting iOS & Android.
                           DESC
-  s.homepage            = "http://invertase.io/oss/react-native-firebase"
+  s.homepage            = "http://enhancers.it/oss/react-native-enhanced-notifications"
   s.license             = package['license']
   s.authors             = "Invertase Limited"
-  s.source              = { :git => "https://github.com/invertase/react-native-firebase.git", :tag => "v#{s.version}" }
-  s.social_media_url    = 'http://twitter.com/invertaseio'
+  s.source              = { :git => "https://github.com/frank10gm/react-native-enhanced-notifications.git", :tag => "v#{s.version}" }
+  s.social_media_url    = 'http://twitter.com/enhancers'
   s.ios.deployment_target = "10.0"
   s.source_files        = 'ios/**/*.{h,m}'
 

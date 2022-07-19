@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-present Invertase Limited & Contributors
+ * Copyright (c) 2016-present Enhancers Limited & Contributors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this library except in compliance with the License.
@@ -48,28 +48,28 @@ describe('config', function () {
 
     it('should set bool values', async function () {
       const prefsBefore = await NativeModules.RNENAppModule.preferencesGetAll();
-      should.equal(prefsBefore.invertase_oss, undefined);
-      await NativeModules.RNENAppModule.preferencesSetBool('invertase_oss', true);
+      should.equal(prefsBefore.enhancers_oss, undefined);
+      await NativeModules.RNENAppModule.preferencesSetBool('enhancers_oss', true);
       const prefsAfter = await NativeModules.RNENAppModule.preferencesGetAll();
-      prefsAfter.invertase_oss.should.equal(true);
+      prefsAfter.enhancers_oss.should.equal(true);
     });
 
     it('should set string values', async function () {
       const prefsBefore = await NativeModules.RNENAppModule.preferencesGetAll();
-      should.equal(prefsBefore.invertase_oss, undefined);
-      await NativeModules.RNENAppModule.preferencesSetString('invertase_oss', 'invertase.io');
+      should.equal(prefsBefore.enhancers_oss, undefined);
+      await NativeModules.RNENAppModule.preferencesSetString('enhancers_oss', 'enhancers.io');
       const prefsAfter = await NativeModules.RNENAppModule.preferencesGetAll();
-      prefsAfter.invertase_oss.should.equal('invertase.io');
+      prefsAfter.enhancers_oss.should.equal('enhancers.io');
     });
 
     it('should clear all values', async function () {
-      await NativeModules.RNENAppModule.preferencesSetString('invertase_oss', 'invertase.io');
+      await NativeModules.RNENAppModule.preferencesSetString('enhancers_oss', 'enhancers.io');
       const prefsBefore = await NativeModules.RNENAppModule.preferencesGetAll();
-      prefsBefore.invertase_oss.should.equal('invertase.io');
+      prefsBefore.enhancers_oss.should.equal('enhancers.io');
 
       await NativeModules.RNENAppModule.preferencesClearAll();
       const prefsAfter = await NativeModules.RNENAppModule.preferencesGetAll();
-      should.equal(prefsAfter.invertase_oss, undefined);
+      should.equal(prefsAfter.enhancers_oss, undefined);
     });
   });
 });

@@ -1,5 +1,5 @@
 
-package io.invertase.firebase.app;
+package it.enhancers.firebase.app;
 /*
  * Copyright (c) 2016-present Invertase Limited & Contributors
  *

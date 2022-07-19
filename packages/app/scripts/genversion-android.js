@@ -6,7 +6,7 @@ const outputPath = path.resolve(
   __dirname,
   '..',
   'android',
-  'src/reactnative/java/io/invertase/firebase/app',
+  'src/reactnative/java/it/enhancers/firebase/app',
   'ReactNativeFirebaseVersion.java',
 );
 const template = `

@@ -73,15 +73,15 @@ inquirer
     shelljs.mv(`${dir}/ios/RNEN_Template_`, `${dir}/ios/RNEN${nameUpper}`);
     shelljs.mv(`${dir}/ios/RNEN_Template_.xcodeproj`, `${dir}/ios/RNEN${nameUpper}.xcodeproj`);
     shelljs.mv(
-      `${dir}/android/src/main/java/io/invertase/firebase/_template_`,
-      `${dir}/android/src/main/java/io/invertase/firebase/${name}`,
+      `${dir}/android/src/main/java/it/enhancers/firebase/_template_`,
+      `${dir}/android/src/main/java/it/enhancers/firebase/${name}`,
     );
 
     for (let i = 0; i < templateFiles.length; i++) {
       const templateFile = templateFiles[i]
         .replace(
-          `${dir}/android/src/main/java/io/invertase/firebase/_template_`,
-          `${dir}/android/src/main/java/io/invertase/firebase/${name}`,
+          `${dir}/android/src/main/java/it/enhancers/firebase/_template_`,
+          `${dir}/android/src/main/java/it/enhancers/firebase/${name}`,
         )
         .replace(`${dir}/ios/RNEN_Template_/`, `${dir}/ios/RNEN${nameUpper}/`)
         .replace(`${dir}/ios/RNEN_Template_.x`, `${dir}/ios/RNEN${nameUpper}.x`);
