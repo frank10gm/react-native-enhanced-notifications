@@ -21,16 +21,16 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.WritableMap;
-import it.enhancers.firebase.app.ReactNativeFirebaseApp;
+import it.enhancers.firebase.app.ReactNativeEnhancedNotificationsApp;
 import java.util.Map;
 
-public class ReactNativeFirebasePreferences {
+public class ReactNativeEnhancedNotificationsPreferences {
   private static final String PREFERENCES_FILE = "it.enhancers.firebase";
-  private static ReactNativeFirebasePreferences sharedInstance =
-      new ReactNativeFirebasePreferences();
+  private static ReactNativeEnhancedNotificationsPreferences sharedInstance =
+      new ReactNativeEnhancedNotificationsPreferences();
   private SharedPreferences preferences;
 
-  public static ReactNativeFirebasePreferences getSharedInstance() {
+  public static ReactNativeEnhancedNotificationsPreferences getSharedInstance() {
     return sharedInstance;
   }
 
@@ -80,7 +80,7 @@ public class ReactNativeFirebasePreferences {
   private SharedPreferences getPreferences() {
     if (preferences == null) {
       preferences =
-          ReactNativeFirebaseApp.getApplicationContext()
+          ReactNativeEnhancedNotificationsApp.getApplicationContext()
               .getSharedPreferences(PREFERENCES_FILE, Context.MODE_PRIVATE);
     }
     return preferences;

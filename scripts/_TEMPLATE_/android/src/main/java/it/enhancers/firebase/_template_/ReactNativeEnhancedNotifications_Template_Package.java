@@ -27,11 +27,11 @@ import java.util.Collections;
 import java.util.List;
 
 @SuppressWarnings("unused")
-public class ReactNativeFirebase_Template_Package implements ReactPackage {
+public class ReactNativeEnhancedNotifications_Template_Package implements ReactPackage {
   @Override
   public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
     List<NativeModule> modules = new ArrayList<>();
-    modules.add(new ReactNativeFirebase_Template_Module(reactContext));
+    modules.add(new ReactNativeEnhancedNotifications_Template_Module(reactContext));
     return modules;
   }
 

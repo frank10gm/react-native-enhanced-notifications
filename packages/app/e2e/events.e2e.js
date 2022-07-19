@@ -22,7 +22,7 @@ const eventBody = {
 };
 
 describe('Core -> EventEmitter', function () {
-  describe('ReactNativeFirebaseEventEmitter', function () {
+  describe('ReactNativeEnhancedNotificationsEventEmitter', function () {
     it('queues events before app is ready', async function () {
       const { eventsPing, eventsNotifyReady, eventsGetListeners } = NativeModules.RNENAppModule;
       await eventsNotifyReady(false);

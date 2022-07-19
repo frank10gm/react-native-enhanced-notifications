@@ -30,9 +30,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ReactNativeFirebaseEventEmitter {
-  private static ReactNativeFirebaseEventEmitter sharedInstance =
-      new ReactNativeFirebaseEventEmitter();
+public class ReactNativeEnhancedNotificationsEventEmitter {
+  private static ReactNativeEnhancedNotificationsEventEmitter sharedInstance =
+      new ReactNativeEnhancedNotificationsEventEmitter();
   private final List<NativeEvent> queuedEvents = new ArrayList<>();
   private final Handler handler = new Handler(Looper.getMainLooper());
   private final HashMap<String, Integer> jsListeners = new HashMap<>();
@@ -40,14 +40,14 @@ public class ReactNativeFirebaseEventEmitter {
   private Boolean jsReady = false;
   private int jsListenerCount;
 
-  public static ReactNativeFirebaseEventEmitter getSharedInstance() {
+  public static ReactNativeEnhancedNotificationsEventEmitter getSharedInstance() {
     return sharedInstance;
   }
 
   public void attachReactContext(final ReactContext reactContext) {
     handler.post(
         () -> {
-          ReactNativeFirebaseEventEmitter.this.reactContext = reactContext;
+          ReactNativeEnhancedNotificationsEventEmitter.this.reactContext = reactContext;
           sendQueuedEvents();
         });
   }

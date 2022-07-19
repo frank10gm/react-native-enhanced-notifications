@@ -32,25 +32,25 @@ import com.google.android.gms.tasks.Tasks;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.messaging.RemoteMessage;
-import it.enhancers.firebase.common.ReactNativeFirebaseEventEmitter;
-import it.enhancers.firebase.common.ReactNativeFirebaseModule;
+import it.enhancers.firebase.common.ReactNativeEnhancedNotificationsEventEmitter;
+import it.enhancers.firebase.common.ReactNativeEnhancedNotificationsModule;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ReactNativeFirebaseMessagingModule extends ReactNativeFirebaseModule
+public class ReactNativeEnhancedNotificationsMessagingModule extends ReactNativeEnhancedNotificationsModule
     implements ActivityEventListener {
   private static final String TAG = "Messaging";
   ReadableMap initialNotification = null;
   private HashMap<String, Boolean> initialNotificationMap = new HashMap<>();
 
-  ReactNativeFirebaseMessagingModule(ReactApplicationContext reactContext) {
+  ReactNativeEnhancedNotificationsMessagingModule(ReactApplicationContext reactContext) {
     super(reactContext, TAG);
     reactContext.addActivityEventListener(this);
   }
 
   private WritableMap popRemoteMessageMapFromMessagingStore(String messageId) {
-    ReactNativeFirebaseMessagingStore messagingStore =
-        ReactNativeFirebaseMessagingStoreHelper.getInstance().getMessagingStore();
+    ReactNativeEnhancedNotificationsMessagingStore messagingStore =
+        ReactNativeEnhancedNotificationsMessagingStoreHelper.getInstance().getMessagingStore();
     WritableMap remoteMessageMap = messagingStore.getFirebaseMessageMap(messageId);
     messagingStore.clearFirebaseMessage(messageId);
     return remoteMessageMap;
@@ -77,12 +77,12 @@ public class ReactNativeFirebaseMessagingModule extends ReactNativeFirebaseModul
           if (messageId != null && initialNotificationMap.get(messageId) == null) {
             WritableMap remoteMessageMap;
             RemoteMessage remoteMessage =
-                ReactNativeFirebaseMessagingReceiver.notifications.get(messageId);
+                ReactNativeEnhancedNotificationsMessagingReceiver.notifications.get(messageId);
             if (remoteMessage == null) {
               remoteMessageMap = popRemoteMessageMapFromMessagingStore(messageId);
             } else {
               remoteMessageMap =
-                  ReactNativeFirebaseMessagingSerializer.remoteMessageToWritableMap(remoteMessage);
+                  ReactNativeEnhancedNotificationsMessagingSerializer.remoteMessageToWritableMap(remoteMessage);
             }
             if (remoteMessageMap != null) {
               promise.resolve(remoteMessageMap);
@@ -179,7 +179,7 @@ public class ReactNativeFirebaseMessagingModule extends ReactNativeFirebaseModul
             () -> {
               FirebaseMessaging.getInstance()
                   .send(
-                      ReactNativeFirebaseMessagingSerializer.remoteMessageFromReadableMap(
+                      ReactNativeEnhancedNotificationsMessagingSerializer.remoteMessageFromReadableMap(
                           remoteMessageMap));
               return null;
             })
@@ -241,14 +241,14 @@ public class ReactNativeFirebaseMessagingModule extends ReactNativeFirebaseModul
 
       if (messageId != null) {
         RemoteMessage remoteMessage =
-            ReactNativeFirebaseMessagingReceiver.notifications.get(messageId);
+            ReactNativeEnhancedNotificationsMessagingReceiver.notifications.get(messageId);
         WritableMap remoteMessageMap;
 
         if (remoteMessage == null) {
           remoteMessageMap = popRemoteMessageMapFromMessagingStore(messageId);
         } else {
           remoteMessageMap =
-              ReactNativeFirebaseMessagingSerializer.remoteMessageToWritableMap(remoteMessage);
+              ReactNativeEnhancedNotificationsMessagingSerializer.remoteMessageToWritableMap(remoteMessage);
         }
 
         if (remoteMessageMap != null) {
@@ -257,12 +257,12 @@ public class ReactNativeFirebaseMessagingModule extends ReactNativeFirebaseModul
           WritableNativeMap newInitialNotification = new WritableNativeMap();
           newInitialNotification.merge(remoteMessageMap);
           initialNotification = newInitialNotification;
-          ReactNativeFirebaseMessagingReceiver.notifications.remove(messageId);
+          ReactNativeEnhancedNotificationsMessagingReceiver.notifications.remove(messageId);
 
-          ReactNativeFirebaseEventEmitter emitter =
-              ReactNativeFirebaseEventEmitter.getSharedInstance();
+          ReactNativeEnhancedNotificationsEventEmitter emitter =
+              ReactNativeEnhancedNotificationsEventEmitter.getSharedInstance();
           emitter.sendEvent(
-              ReactNativeFirebaseMessagingSerializer.remoteMessageMapToEvent(
+              ReactNativeEnhancedNotificationsMessagingSerializer.remoteMessageMapToEvent(
                   remoteMessageMap, true));
         }
       }

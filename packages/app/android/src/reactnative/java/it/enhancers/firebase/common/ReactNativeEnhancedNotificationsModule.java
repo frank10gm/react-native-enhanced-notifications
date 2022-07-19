@@ -27,13 +27,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 
-public class ReactNativeFirebaseModule extends ReactContextBaseJavaModule
+public class ReactNativeEnhancedNotificationsModule extends ReactContextBaseJavaModule
     implements ContextProvider {
   private final TaskExecutorService executorService;
 
   private String moduleName;
 
-  public ReactNativeFirebaseModule(ReactApplicationContext reactContext, String moduleName) {
+  public ReactNativeEnhancedNotificationsModule(ReactApplicationContext reactContext, String moduleName) {
     super(reactContext);
     this.moduleName = moduleName;
     this.executorService = new TaskExecutorService(getName());

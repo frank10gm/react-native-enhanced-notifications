@@ -20,17 +20,17 @@ package it.enhancers.firebase.common;
 import com.facebook.react.bridge.WritableMap;
 import it.enhancers.firebase.interfaces.NativeEvent;
 
-public class ReactNativeFirebaseEvent implements NativeEvent {
+public class ReactNativeEnhancedNotificationsEvent implements NativeEvent {
   private String eventName;
   private WritableMap eventBody;
   private String firebaseAppName;
 
-  public ReactNativeFirebaseEvent(String eventName, WritableMap eventBody) {
+  public ReactNativeEnhancedNotificationsEvent(String eventName, WritableMap eventBody) {
     this.eventName = eventName;
     this.eventBody = eventBody;
   }
 
-  public ReactNativeFirebaseEvent(String eventName, WritableMap eventBody, String firebaseAppName) {
+  public ReactNativeEnhancedNotificationsEvent(String eventName, WritableMap eventBody, String firebaseAppName) {
     this.eventName = eventName;
     this.eventBody = eventBody;
     this.firebaseAppName = firebaseAppName;

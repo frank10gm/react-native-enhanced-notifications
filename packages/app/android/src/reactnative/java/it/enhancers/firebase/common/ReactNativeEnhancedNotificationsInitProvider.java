@@ -24,10 +24,10 @@ import android.content.pm.ProviderInfo;
 import android.database.Cursor;
 import android.net.Uri;
 import androidx.annotation.Nullable;
-import it.enhancers.firebase.app.ReactNativeFirebaseApp;
+import it.enhancers.firebase.app.ReactNativeEnhancedNotificationsApp;
 import javax.annotation.OverridingMethodsMustInvokeSuper;
 
-public class ReactNativeFirebaseInitProvider extends ContentProvider {
+public class ReactNativeEnhancedNotificationsInitProvider extends ContentProvider {
   @Override
   public void attachInfo(Context context, ProviderInfo info) {
     super.attachInfo(context, info);
@@ -36,12 +36,12 @@ public class ReactNativeFirebaseInitProvider extends ContentProvider {
   @Override
   @OverridingMethodsMustInvokeSuper
   public boolean onCreate() {
-    if (ReactNativeFirebaseApp.getApplicationContext() == null) {
+    if (ReactNativeEnhancedNotificationsApp.getApplicationContext() == null) {
       Context applicationContext = getContext();
       if (applicationContext != null && applicationContext.getApplicationContext() != null) {
         applicationContext = applicationContext.getApplicationContext();
       }
-      ReactNativeFirebaseApp.setApplicationContext(applicationContext);
+      ReactNativeEnhancedNotificationsApp.setApplicationContext(applicationContext);
     }
 
     return false;

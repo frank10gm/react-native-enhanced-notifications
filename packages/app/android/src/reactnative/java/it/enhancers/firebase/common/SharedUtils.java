@@ -128,7 +128,7 @@ public class SharedUtils {
     if (appProcesses == null) return false;
 
     // Check if current activity is a background activity
-    ReactNativeFirebaseJSON json = ReactNativeFirebaseJSON.getSharedInstance();
+    ReactNativeEnhancedNotificationsJSON json = ReactNativeEnhancedNotificationsJSON.getSharedInstance();
     if (json.contains("android_background_activity_names")) {
       ArrayList<String> backgroundActivities =
           json.getArrayValue("android_background_activity_names");

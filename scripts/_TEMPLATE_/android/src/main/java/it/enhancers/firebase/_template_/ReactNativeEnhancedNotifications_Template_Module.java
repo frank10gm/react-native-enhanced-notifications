@@ -18,12 +18,12 @@ package it.enhancers.firebase._template_;
  */
 
 import com.facebook.react.bridge.*;
-import it.enhancers.firebase.common.ReactNativeFirebaseModule;
+import it.enhancers.firebase.common.ReactNativeEnhancedNotificationsModule;
 
-public class ReactNativeFirebase_Template_Module extends ReactNativeFirebaseModule {
+public class ReactNativeEnhancedNotifications_Template_Module extends ReactNativeEnhancedNotificationsModule {
   private static final String TAG = "_Template_";
 
-  ReactNativeFirebase_Template_Module(ReactApplicationContext reactContext) {
+  ReactNativeEnhancedNotifications_Template_Module(ReactApplicationContext reactContext) {
     super(reactContext, TAG);
   }
 

@@ -3,7 +3,7 @@ package it.enhancers.firebase.messaging;
 import com.facebook.react.bridge.WritableMap;
 import com.google.firebase.messaging.RemoteMessage;
 
-public interface ReactNativeFirebaseMessagingStore {
+public interface ReactNativeEnhancedNotificationsMessagingStore {
   void storeFirebaseMessage(RemoteMessage remoteMessage);
 
   @Deprecated

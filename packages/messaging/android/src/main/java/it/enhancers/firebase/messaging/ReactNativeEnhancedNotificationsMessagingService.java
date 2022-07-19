@@ -2,32 +2,32 @@ package it.enhancers.firebase.messaging;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import it.enhancers.firebase.common.ReactNativeFirebaseEventEmitter;
+import it.enhancers.firebase.common.ReactNativeEnhancedNotificationsEventEmitter;
 
-public class ReactNativeFirebaseMessagingService extends FirebaseMessagingService {
+public class ReactNativeEnhancedNotificationsMessagingService extends FirebaseMessagingService {
   @Override
   public void onSendError(String messageId, Exception sendError) {
-    ReactNativeFirebaseEventEmitter emitter = ReactNativeFirebaseEventEmitter.getSharedInstance();
+    ReactNativeEnhancedNotificationsEventEmitter emitter = ReactNativeEnhancedNotificationsEventEmitter.getSharedInstance();
     emitter.sendEvent(
-        ReactNativeFirebaseMessagingSerializer.messageSendErrorToEvent(messageId, sendError));
+        ReactNativeEnhancedNotificationsMessagingSerializer.messageSendErrorToEvent(messageId, sendError));
   }
 
   @Override
   public void onDeletedMessages() {
-    ReactNativeFirebaseEventEmitter emitter = ReactNativeFirebaseEventEmitter.getSharedInstance();
-    emitter.sendEvent(ReactNativeFirebaseMessagingSerializer.messagesDeletedToEvent());
+    ReactNativeEnhancedNotificationsEventEmitter emitter = ReactNativeEnhancedNotificationsEventEmitter.getSharedInstance();
+    emitter.sendEvent(ReactNativeEnhancedNotificationsMessagingSerializer.messagesDeletedToEvent());
   }
 
   @Override
   public void onMessageSent(String messageId) {
-    ReactNativeFirebaseEventEmitter emitter = ReactNativeFirebaseEventEmitter.getSharedInstance();
-    emitter.sendEvent(ReactNativeFirebaseMessagingSerializer.messageSentToEvent(messageId));
+    ReactNativeEnhancedNotificationsEventEmitter emitter = ReactNativeEnhancedNotificationsEventEmitter.getSharedInstance();
+    emitter.sendEvent(ReactNativeEnhancedNotificationsMessagingSerializer.messageSentToEvent(messageId));
   }
 
   @Override
   public void onNewToken(String token) {
-    ReactNativeFirebaseEventEmitter emitter = ReactNativeFirebaseEventEmitter.getSharedInstance();
-    emitter.sendEvent(ReactNativeFirebaseMessagingSerializer.newTokenToTokenEvent(token));
+    ReactNativeEnhancedNotificationsEventEmitter emitter = ReactNativeEnhancedNotificationsEventEmitter.getSharedInstance();
+    emitter.sendEvent(ReactNativeEnhancedNotificationsMessagingSerializer.newTokenToTokenEvent(token));
   }
 
   @Override

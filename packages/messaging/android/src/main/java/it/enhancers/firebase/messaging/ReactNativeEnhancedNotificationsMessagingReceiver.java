@@ -7,28 +7,28 @@ import android.content.Intent;
 import android.util.Log;
 import com.facebook.react.HeadlessJsTaskService;
 import com.google.firebase.messaging.RemoteMessage;
-import it.enhancers.firebase.app.ReactNativeFirebaseApp;
-import it.enhancers.firebase.common.ReactNativeFirebaseEventEmitter;
+import it.enhancers.firebase.app.ReactNativeEnhancedNotificationsApp;
+import it.enhancers.firebase.common.ReactNativeEnhancedNotificationsEventEmitter;
 import it.enhancers.firebase.common.SharedUtils;
 import java.util.HashMap;
 
-public class ReactNativeFirebaseMessagingReceiver extends BroadcastReceiver {
+public class ReactNativeEnhancedNotificationsMessagingReceiver extends BroadcastReceiver {
   private static final String TAG = "RNFirebaseMsgReceiver";
   static HashMap<String, RemoteMessage> notifications = new HashMap<>();
 
   @Override
   public void onReceive(Context context, Intent intent) {
     Log.d(TAG, "broadcast received for message");
-    if (ReactNativeFirebaseApp.getApplicationContext() == null) {
-      ReactNativeFirebaseApp.setApplicationContext(context.getApplicationContext());
+    if (ReactNativeEnhancedNotificationsApp.getApplicationContext() == null) {
+      ReactNativeEnhancedNotificationsApp.setApplicationContext(context.getApplicationContext());
     }
     RemoteMessage remoteMessage = new RemoteMessage(intent.getExtras());
-    ReactNativeFirebaseEventEmitter emitter = ReactNativeFirebaseEventEmitter.getSharedInstance();
+    ReactNativeEnhancedNotificationsEventEmitter emitter = ReactNativeEnhancedNotificationsEventEmitter.getSharedInstance();
 
     // Add a RemoteMessage if the message contains a notification payload
     if (remoteMessage.getNotification() != null) {
       notifications.put(remoteMessage.getMessageId(), remoteMessage);
-      ReactNativeFirebaseMessagingStoreHelper.getInstance()
+      ReactNativeEnhancedNotificationsMessagingStoreHelper.getInstance()
           .getMessagingStore()
           .storeFirebaseMessage(remoteMessage);
     }
@@ -38,7 +38,7 @@ public class ReactNativeFirebaseMessagingReceiver extends BroadcastReceiver {
     //   ------------------------
     if (SharedUtils.isAppInForeground(context)) {
       emitter.sendEvent(
-          ReactNativeFirebaseMessagingSerializer.remoteMessageToEvent(remoteMessage, false));
+          ReactNativeEnhancedNotificationsMessagingSerializer.remoteMessageToEvent(remoteMessage, false));
       return;
     }
 
@@ -48,7 +48,7 @@ public class ReactNativeFirebaseMessagingReceiver extends BroadcastReceiver {
 
     try {
       Intent backgroundIntent =
-          new Intent(context, ReactNativeFirebaseMessagingHeadlessService.class);
+          new Intent(context, ReactNativeEnhancedNotificationsMessagingHeadlessService.class);
       backgroundIntent.putExtra("message", remoteMessage);
       ComponentName name = context.startService(backgroundIntent);
       if (name != null) {

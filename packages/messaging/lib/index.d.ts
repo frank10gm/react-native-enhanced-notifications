@@ -15,7 +15,7 @@
  *
  */
 
-import { ReactNativeFirebase } from '@react-native-enhanced-notifications/app';
+import { ReactNativeEnhancedNotifications } from '@react-native-enhanced-notifications/app';
 
 /**
  * Firebase Messaging package for React Native.
@@ -54,8 +54,8 @@ import { ReactNativeFirebase } from '@react-native-enhanced-notifications/app';
  * @firebase messaging
  */
 export namespace FirebaseMessagingTypes {
-  import FirebaseModule = ReactNativeFirebase.FirebaseModule;
-  import NativeFirebaseError = ReactNativeFirebase.NativeFirebaseError;
+  import FirebaseModule = ReactNativeEnhancedNotifications.FirebaseModule;
+  import NativeFirebaseError = ReactNativeEnhancedNotifications.NativeFirebaseError;
 
   export interface Statics {
     AuthorizationStatus: typeof AuthorizationStatus;
@@ -989,16 +989,16 @@ export namespace FirebaseMessagingTypes {
   }
 }
 
-declare const defaultExport: ReactNativeFirebase.FirebaseModuleWithStatics<
+declare const defaultExport: ReactNativeEnhancedNotifications.FirebaseModuleWithStatics<
   FirebaseMessagingTypes.Module,
   FirebaseMessagingTypes.Statics
 >;
 
-export const firebase: ReactNativeFirebase.Module & {
+export const firebase: ReactNativeEnhancedNotifications.Module & {
   messaging: typeof defaultExport;
   app(
     name?: string,
-  ): ReactNativeFirebase.FirebaseApp & { messaging(): FirebaseMessagingTypes.Module };
+  ): ReactNativeEnhancedNotifications.FirebaseApp & { messaging(): FirebaseMessagingTypes.Module };
 };
 
 export default defaultExport;
@@ -1008,8 +1008,8 @@ export default defaultExport;
  */
 declare module '@react-native-enhanced-notifications/app' {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  namespace ReactNativeFirebase {
-    import FirebaseModuleWithStatics = ReactNativeFirebase.FirebaseModuleWithStatics;
+  namespace ReactNativeEnhancedNotifications {
+    import FirebaseModuleWithStatics = ReactNativeEnhancedNotifications.FirebaseModuleWithStatics;
     interface Module {
       messaging: FirebaseModuleWithStatics<
         FirebaseMessagingTypes.Module,

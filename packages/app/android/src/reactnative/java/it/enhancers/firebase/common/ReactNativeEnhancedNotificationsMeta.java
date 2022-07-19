@@ -23,20 +23,20 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.WritableMap;
-import it.enhancers.firebase.app.ReactNativeFirebaseApp;
+import it.enhancers.firebase.app.ReactNativeEnhancedNotificationsApp;
 
-public class ReactNativeFirebaseMeta {
+public class ReactNativeEnhancedNotificationsMeta {
   private static final String TAG = "RNENMetaProvider";
   private static final String META_PREFIX = "rnfirebase_";
-  private static ReactNativeFirebaseMeta sharedInstance = new ReactNativeFirebaseMeta();
+  private static ReactNativeEnhancedNotificationsMeta sharedInstance = new ReactNativeEnhancedNotificationsMeta();
 
-  public static ReactNativeFirebaseMeta getSharedInstance() {
+  public static ReactNativeEnhancedNotificationsMeta getSharedInstance() {
     return sharedInstance;
   }
 
   private Bundle getMetaData() {
     try {
-      Context context = ReactNativeFirebaseApp.getApplicationContext();
+      Context context = ReactNativeEnhancedNotificationsApp.getApplicationContext();
       PackageManager packageManager = context.getPackageManager();
 
       if (packageManager == null) return null;

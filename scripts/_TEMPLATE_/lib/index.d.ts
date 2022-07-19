@@ -15,7 +15,7 @@
  *
  */
 
-import { ReactNativeFirebase } from '@react-native-enhanced-notifications/app';
+import { ReactNativeEnhancedNotifications } from '@react-native-enhanced-notifications/app';
 
 /**
  * Firebase _Template_ package for React Native.
@@ -54,7 +54,7 @@ import { ReactNativeFirebase } from '@react-native-enhanced-notifications/app';
  * @firebase _template_
  */
 export namespace Firebase_Template_Types {
-  import FirebaseModule = ReactNativeFirebase.FirebaseModule;
+  import FirebaseModule = ReactNativeEnhancedNotifications.FirebaseModule;
 
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   export interface Statics {
@@ -103,16 +103,16 @@ export namespace Firebase_Template_Types {
   }
 }
 
-declare const defaultExport: ReactNativeFirebase.FirebaseModuleWithStaticsAndApp<
+declare const defaultExport: ReactNativeEnhancedNotifications.FirebaseModuleWithStaticsAndApp<
   Firebase_Template_Types.Module,
   Firebase_Template_Types.Statics
 >;
 
-export const firebase: ReactNativeFirebase.Module & {
+export const firebase: ReactNativeEnhancedNotifications.Module & {
   _template_: typeof defaultExport;
   app(
     name?: string,
-  ): ReactNativeFirebase.FirebaseApp & { _template_(): Firebase_Template_Types.Module };
+  ): ReactNativeEnhancedNotifications.FirebaseApp & { _template_(): Firebase_Template_Types.Module };
 };
 
 export default defaultExport;
@@ -121,8 +121,8 @@ export default defaultExport;
  * Attach namespace to `firebase.` and `FirebaseApp.`.
  */
 declare module '@react-native-enhanced-notifications/app' {
-  namespace ReactNativeFirebase {
-    import FirebaseModuleWithStaticsAndApp = ReactNativeFirebase.FirebaseModuleWithStaticsAndApp;
+  namespace ReactNativeEnhancedNotifications {
+    import FirebaseModuleWithStaticsAndApp = ReactNativeEnhancedNotifications.FirebaseModuleWithStaticsAndApp;
     interface Module {
       _template_: FirebaseModuleWithStaticsAndApp<
         Firebase_Template_Types.Module,

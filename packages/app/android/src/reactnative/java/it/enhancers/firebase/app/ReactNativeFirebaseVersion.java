@@ -1,5 +1,5 @@
-package it.enhancers.firebase.app;
 
+package it.enhancers.firebase.app;
 /*
  * Copyright (c) 2016-present Invertase Limited & Contributors
  *
@@ -16,20 +16,7 @@ package it.enhancers.firebase.app;
  * limitations under the License.
  *
  */
-
-import androidx.annotation.Keep;
-import com.google.firebase.components.Component;
-import com.google.firebase.components.ComponentRegistrar;
-import com.google.firebase.platforminfo.LibraryVersionComponent;
-import java.util.Collections;
-import java.util.List;
-
-@Keep
-public class ReactNativeEnhancedNotificationsAppRegistrar implements ComponentRegistrar {
-  @Override
-  public List<Component<?>> getComponents() {
-    return Collections.singletonList(
-        LibraryVersionComponent.create(
-            "react-native-enhanced-notifications", ReactNativeEnhancedNotificationsVersion.VERSION));
-  }
+// generated file - do not modify or commit
+public class ReactNativeFirebaseVersion {
+  public static String VERSION = "20.0.1";
 }

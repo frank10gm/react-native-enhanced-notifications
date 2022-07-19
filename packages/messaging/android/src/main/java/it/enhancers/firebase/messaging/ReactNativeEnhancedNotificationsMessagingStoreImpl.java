@@ -2,8 +2,8 @@ package it.enhancers.firebase.messaging;
 
 import static it.enhancers.firebase.messaging.JsonConvert.jsonToReact;
 import static it.enhancers.firebase.messaging.JsonConvert.reactToJSON;
-import static it.enhancers.firebase.messaging.ReactNativeFirebaseMessagingSerializer.remoteMessageFromReadableMap;
-import static it.enhancers.firebase.messaging.ReactNativeFirebaseMessagingSerializer.remoteMessageToWritableMap;
+import static it.enhancers.firebase.messaging.ReactNativeEnhancedNotificationsMessagingSerializer.remoteMessageFromReadableMap;
+import static it.enhancers.firebase.messaging.ReactNativeEnhancedNotificationsMessagingSerializer.remoteMessageToWritableMap;
 
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableMap;
@@ -15,7 +15,7 @@ import java.util.List;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class ReactNativeFirebaseMessagingStoreImpl implements ReactNativeFirebaseMessagingStore {
+public class ReactNativeEnhancedNotificationsMessagingStoreImpl implements ReactNativeEnhancedNotificationsMessagingStore {
 
   private static final String S_KEY_ALL_NOTIFICATION_IDS = "all_notification_ids";
   private static final int MAX_SIZE_NOTIFICATIONS = 100;

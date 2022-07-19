@@ -5,12 +5,12 @@ import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableMapKeySetIterator;
 import com.facebook.react.bridge.WritableMap;
 import com.google.firebase.messaging.RemoteMessage;
-import it.enhancers.firebase.common.ReactNativeFirebaseEvent;
+import it.enhancers.firebase.common.ReactNativeEnhancedNotificationsEvent;
 import it.enhancers.firebase.common.SharedUtils;
 import java.util.Map;
 import java.util.Set;
 
-public class ReactNativeFirebaseMessagingSerializer {
+public class ReactNativeEnhancedNotificationsMessagingSerializer {
   private static final String KEY_TOKEN = "token";
   private static final String KEY_COLLAPSE_KEY = "collapseKey";
   private static final String KEY_DATA = "data";
@@ -28,41 +28,41 @@ public class ReactNativeFirebaseMessagingSerializer {
   private static final String EVENT_MESSAGE_SEND_ERROR = "messaging_message_send_error";
   private static final String EVENT_NEW_TOKEN = "messaging_token_refresh";
 
-  public static ReactNativeFirebaseEvent messagesDeletedToEvent() {
-    return new ReactNativeFirebaseEvent(EVENT_MESSAGES_DELETED, Arguments.createMap());
+  public static ReactNativeEnhancedNotificationsEvent messagesDeletedToEvent() {
+    return new ReactNativeEnhancedNotificationsEvent(EVENT_MESSAGES_DELETED, Arguments.createMap());
   }
 
-  public static ReactNativeFirebaseEvent messageSentToEvent(String messageId) {
+  public static ReactNativeEnhancedNotificationsEvent messageSentToEvent(String messageId) {
     WritableMap eventBody = Arguments.createMap();
     eventBody.putString(KEY_MESSAGE_ID, messageId);
-    return new ReactNativeFirebaseEvent(EVENT_MESSAGE_SENT, eventBody);
+    return new ReactNativeEnhancedNotificationsEvent(EVENT_MESSAGE_SENT, eventBody);
   }
 
-  public static ReactNativeFirebaseEvent messageSendErrorToEvent(
+  public static ReactNativeEnhancedNotificationsEvent messageSendErrorToEvent(
       String messageId, Exception sendError) {
     WritableMap eventBody = Arguments.createMap();
     eventBody.putString(KEY_MESSAGE_ID, messageId);
     eventBody.putMap(KEY_ERROR, SharedUtils.getExceptionMap(sendError));
-    return new ReactNativeFirebaseEvent(EVENT_MESSAGE_SEND_ERROR, eventBody);
+    return new ReactNativeEnhancedNotificationsEvent(EVENT_MESSAGE_SEND_ERROR, eventBody);
   }
 
-  public static ReactNativeFirebaseEvent remoteMessageToEvent(
+  public static ReactNativeEnhancedNotificationsEvent remoteMessageToEvent(
       RemoteMessage remoteMessage, Boolean openEvent) {
-    return new ReactNativeFirebaseEvent(
+    return new ReactNativeEnhancedNotificationsEvent(
         openEvent ? EVENT_NOTIFICATION_OPENED : EVENT_MESSAGE_RECEIVED,
         remoteMessageToWritableMap(remoteMessage));
   }
 
-  public static ReactNativeFirebaseEvent remoteMessageMapToEvent(
+  public static ReactNativeEnhancedNotificationsEvent remoteMessageMapToEvent(
       WritableMap remoteMessageMap, Boolean openEvent) {
-    return new ReactNativeFirebaseEvent(
+    return new ReactNativeEnhancedNotificationsEvent(
         openEvent ? EVENT_NOTIFICATION_OPENED : EVENT_MESSAGE_RECEIVED, remoteMessageMap);
   }
 
-  public static ReactNativeFirebaseEvent newTokenToTokenEvent(String newToken) {
+  public static ReactNativeEnhancedNotificationsEvent newTokenToTokenEvent(String newToken) {
     WritableMap eventBody = Arguments.createMap();
     eventBody.putString(KEY_TOKEN, newToken);
-    return new ReactNativeFirebaseEvent(EVENT_NEW_TOKEN, eventBody);
+    return new ReactNativeEnhancedNotificationsEvent(EVENT_NEW_TOKEN, eventBody);
   }
 
   static WritableMap remoteMessageToWritableMap(RemoteMessage remoteMessage) {

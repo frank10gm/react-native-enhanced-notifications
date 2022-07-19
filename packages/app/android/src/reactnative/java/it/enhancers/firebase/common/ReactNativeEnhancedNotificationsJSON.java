@@ -25,12 +25,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class ReactNativeFirebaseJSON {
-  private static ReactNativeFirebaseJSON sharedInstance = new ReactNativeFirebaseJSON();
+public class ReactNativeEnhancedNotificationsJSON {
+  private static ReactNativeEnhancedNotificationsJSON sharedInstance = new ReactNativeEnhancedNotificationsJSON();
 
   private JSONObject jsonObject;
 
-  private ReactNativeFirebaseJSON() {
+  private ReactNativeEnhancedNotificationsJSON() {
     try {
       jsonObject = new JSONObject(BuildConfig.FIREBASE_JSON_RAW);
     } catch (JSONException e) {
@@ -38,7 +38,7 @@ public class ReactNativeFirebaseJSON {
     }
   }
 
-  public static ReactNativeFirebaseJSON getSharedInstance() {
+  public static ReactNativeEnhancedNotificationsJSON getSharedInstance() {
     return sharedInstance;
   }
 

@@ -19,7 +19,7 @@ package it.enhancers.firebase.common;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import it.enhancers.firebase.app.ReactNativeFirebaseApp;
+import it.enhancers.firebase.app.ReactNativeEnhancedNotificationsApp;
 
 public class UniversalFirebasePreferences {
   private static final String PREFERENCES_FILE = "it.enhancers.firebase";
@@ -81,7 +81,7 @@ public class UniversalFirebasePreferences {
   private SharedPreferences getPreferences() {
     if (preferences == null) {
       preferences =
-          ReactNativeFirebaseApp.getApplicationContext()
+          ReactNativeEnhancedNotificationsApp.getApplicationContext()
               .getSharedPreferences(PREFERENCES_FILE, Context.MODE_PRIVATE);
     }
     return preferences;

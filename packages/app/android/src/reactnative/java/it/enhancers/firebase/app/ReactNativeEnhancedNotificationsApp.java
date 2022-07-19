@@ -22,7 +22,7 @@ import android.util.Log;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 
-public class ReactNativeFirebaseApp {
+public class ReactNativeEnhancedNotificationsApp {
   private static Context applicationContext;
 
   public static Context getApplicationContext() {
@@ -30,8 +30,8 @@ public class ReactNativeFirebaseApp {
   }
 
   public static void setApplicationContext(Context applicationContext) {
-    Log.d("ReactNativeFirebaseApp", "received application context.");
-    ReactNativeFirebaseApp.applicationContext = applicationContext;
+    Log.d("ReactNativeEnhancedNotificationsApp", "received application context.");
+    ReactNativeEnhancedNotificationsApp.applicationContext = applicationContext;
   }
 
   public static void initializeSecondaryApp(String name) {

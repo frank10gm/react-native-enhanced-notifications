@@ -181,8 +181,8 @@ function getMissingModuleHelpText(namespace) {
     );
   }
 
-  const rnFirebasePackage = `'it.enhancers.firebase.${namespace}.ReactNativeFirebase${nativeModule}Package'`;
-  const newInstance = `'new ReactNativeFirebase${nativeModule}Package()'`;
+  const rnFirebasePackage = `'it.enhancers.firebase.${namespace}.ReactNativeEnhancedNotifications${nativeModule}Package'`;
+  const newInstance = `'new ReactNativeEnhancedNotifications${nativeModule}Package()'`;
 
   return (
     `You attempted to use a firebase module that's not installed on your Android project by calling ${snippet}.` +

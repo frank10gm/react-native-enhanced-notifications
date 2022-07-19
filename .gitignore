@@ -551,7 +551,7 @@ GoogleService-Info.plist
 
 # generated files
 RNENVersion.m
-ReactNativeFirebaseVersion.java
+ReactNativeEnhancedNotificationsVersion.java
 
 appPlaygrounds/
 app.playground.js

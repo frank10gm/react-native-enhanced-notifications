@@ -12,12 +12,12 @@
       tools:targetApi="n"
     >
       <meta-data
-        android:name="com.google.firebase.components:it.enhancers.firebase.app.ReactNativeFirebaseAppRegistrar"
+        android:name="com.google.firebase.components:it.enhancers.firebase.app.ReactNativeEnhancedNotificationsAppRegistrar"
         android:value="com.google.firebase.components.ComponentRegistrar" />
     </service>
     <provider
-      android:name="it.enhancers.firebase.app.ReactNativeFirebaseAppInitProvider"
-      android:authorities="${applicationId}.reactnativefirebaseappinitprovider"
+      android:name="it.enhancers.firebase.app.ReactNativeEnhancedNotificationsAppInitProvider"
+      android:authorities="${applicationId}.ReactNativeEnhancedNotificationsappinitprovider"
       android:exported="false"
       android:initOrder="99" /> <!-- Firebase = 100, using 99 to run after Firebase initialises (highest first) -->
   </application>

@@ -30,7 +30,7 @@
  *
  * @firebase app
  */
-export namespace ReactNativeFirebase {
+export namespace ReactNativeEnhancedNotifications {
   export interface NativeFirebaseError extends Error {
     /**
      * Firebase error code, e.g. `auth/invalid-email`
@@ -263,7 +263,7 @@ export namespace ReactNativeFirebase {
  * @firebase utils
  */
 export namespace Utils {
-  import FirebaseModule = ReactNativeFirebase.FirebaseModule;
+  import FirebaseModule = ReactNativeEnhancedNotifications.FirebaseModule;
 
   /**
    * A collection of native device file paths to aid in the usage of file path based methods.
@@ -570,7 +570,7 @@ export namespace Utils {
 /**
  * Add Utils module as a named export for `app`.
  */
-export const utils: ReactNativeFirebase.FirebaseModuleWithStatics<Utils.Module, Utils.Statics>;
+export const utils: ReactNativeEnhancedNotifications.FirebaseModuleWithStatics<Utils.Module, Utils.Statics>;
 
-declare const module: ReactNativeFirebase.Module;
+declare const module: ReactNativeEnhancedNotifications.Module;
 export default module;

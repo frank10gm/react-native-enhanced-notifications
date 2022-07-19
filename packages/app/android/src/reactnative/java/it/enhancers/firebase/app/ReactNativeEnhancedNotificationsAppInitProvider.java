@@ -17,6 +17,6 @@ package it.enhancers.firebase.app;
  *
  */
 
-import it.enhancers.firebase.common.ReactNativeFirebaseInitProvider;
+import it.enhancers.firebase.common.ReactNativeEnhancedNotificationsInitProvider;
 
-public class ReactNativeFirebaseAppInitProvider extends ReactNativeFirebaseInitProvider {}
+public class ReactNativeEnhancedNotificationsAppInitProvider extends ReactNativeEnhancedNotificationsInitProvider {}

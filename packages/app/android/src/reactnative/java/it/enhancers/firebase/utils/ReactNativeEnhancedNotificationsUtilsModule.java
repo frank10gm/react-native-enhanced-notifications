@@ -27,13 +27,13 @@ import android.util.Log;
 import com.facebook.react.bridge.*;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
-import it.enhancers.firebase.app.ReactNativeFirebaseApp;
-import it.enhancers.firebase.common.ReactNativeFirebaseModule;
+import it.enhancers.firebase.app.ReactNativeEnhancedNotificationsApp;
+import it.enhancers.firebase.common.ReactNativeEnhancedNotificationsModule;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ReactNativeFirebaseUtilsModule extends ReactNativeFirebaseModule {
+public class ReactNativeEnhancedNotificationsUtilsModule extends ReactNativeEnhancedNotificationsModule {
   private static final String TAG = "Utils";
   private static final String KEY_MAIN_BUNDLE = "MAIN_BUNDLE";
   private static final String KEY_DOCUMENT_DIRECTORY = "DOCUMENT_DIRECTORY";
@@ -46,7 +46,7 @@ public class ReactNativeFirebaseUtilsModule extends ReactNativeFirebaseModule {
   private static final String KEY_CACHE_DIRECTORY = "CACHES_DIRECTORY";
   private static final String FIREBASE_TEST_LAB = "firebase.test.lab";
 
-  public ReactNativeFirebaseUtilsModule(ReactApplicationContext reactContext) {
+  public ReactNativeEnhancedNotificationsUtilsModule(ReactApplicationContext reactContext) {
     super(reactContext, TAG);
   }
 
@@ -58,7 +58,7 @@ public class ReactNativeFirebaseUtilsModule extends ReactNativeFirebaseModule {
   private static Boolean isRunningInTestLab() {
     String testLabSetting =
         Settings.System.getString(
-            ReactNativeFirebaseApp.getApplicationContext().getContentResolver(), FIREBASE_TEST_LAB);
+            ReactNativeEnhancedNotificationsApp.getApplicationContext().getContentResolver(), FIREBASE_TEST_LAB);
 
     return "true".equals(testLabSetting);
   }

@@ -7,7 +7,7 @@ const outputPath = path.resolve(
   '..',
   'android',
   'src/reactnative/java/it/enhancers/firebase/app',
-  'ReactNativeFirebaseVersion.java',
+  'ReactNativeEnhancedNotificationsVersion.java',
 );
 const template = `
 package it.enhancers.firebase.app;
@@ -28,7 +28,7 @@ package it.enhancers.firebase.app;
  *
  */
 // generated file - do not modify or commit
-public class ReactNativeFirebaseVersion {
+public class ReactNativeEnhancedNotificationsVersion {
   public static String VERSION = "version_number";
 }
 `;

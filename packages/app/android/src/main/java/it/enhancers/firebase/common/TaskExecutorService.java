@@ -39,7 +39,7 @@ public class TaskExecutorService {
 
   TaskExecutorService(String name) {
     this.name = name;
-    ReactNativeFirebaseJSON json = ReactNativeFirebaseJSON.getSharedInstance();
+    ReactNativeEnhancedNotificationsJSON json = ReactNativeEnhancedNotificationsJSON.getSharedInstance();
     this.maximumPoolSize = json.getIntValue(MAXIMUM_POOL_SIZE_KEY, 1);
     this.keepAliveSeconds = json.getIntValue(KEEP_ALIVE_SECONDS_KEY, 3);
   }

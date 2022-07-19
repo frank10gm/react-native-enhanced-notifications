@@ -26,11 +26,11 @@ import java.util.Collections;
 import java.util.List;
 
 @SuppressWarnings("unused")
-public class ReactNativeFirebaseMessagingPackage implements ReactPackage {
+public class ReactNativeEnhancedNotificationsMessagingPackage implements ReactPackage {
   @Override
   public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
     List<NativeModule> modules = new ArrayList<>();
-    modules.add(new ReactNativeFirebaseMessagingModule(reactContext));
+    modules.add(new ReactNativeEnhancedNotificationsMessagingModule(reactContext));
     return modules;
   }
 

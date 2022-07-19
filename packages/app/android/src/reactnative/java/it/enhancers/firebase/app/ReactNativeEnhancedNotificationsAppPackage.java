@@ -21,23 +21,23 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
-import it.enhancers.firebase.utils.ReactNativeFirebaseUtilsModule;
+import it.enhancers.firebase.utils.ReactNativeEnhancedNotificationsUtilsModule;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.annotation.Nonnull;
 
 @SuppressWarnings("unused")
-public class ReactNativeFirebaseAppPackage implements ReactPackage {
+public class ReactNativeEnhancedNotificationsAppPackage implements ReactPackage {
   @Nonnull
   @Override
   public List<NativeModule> createNativeModules(@Nonnull ReactApplicationContext reactContext) {
-    if (ReactNativeFirebaseApp.getApplicationContext() == null) {
-      ReactNativeFirebaseApp.setApplicationContext(reactContext.getApplicationContext());
+    if (ReactNativeEnhancedNotificationsApp.getApplicationContext() == null) {
+      ReactNativeEnhancedNotificationsApp.setApplicationContext(reactContext.getApplicationContext());
     }
     List<NativeModule> modules = new ArrayList<>();
-    modules.add(new ReactNativeFirebaseAppModule(reactContext));
-    modules.add(new ReactNativeFirebaseUtilsModule(reactContext));
+    modules.add(new ReactNativeEnhancedNotificationsAppModule(reactContext));
+    modules.add(new ReactNativeEnhancedNotificationsUtilsModule(reactContext));
     return modules;
   }
 

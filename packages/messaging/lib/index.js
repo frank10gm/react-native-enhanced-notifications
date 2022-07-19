@@ -72,7 +72,7 @@ class FirebaseMessagingModule extends FirebaseModule {
         ? this.native.isRegisteredForRemoteNotifications
         : true;
 
-    AppRegistry.registerHeadlessTask('ReactNativeFirebaseMessagingHeadlessTask', () => {
+    AppRegistry.registerHeadlessTask('ReactNativeEnhancedNotificationsMessagingHeadlessTask', () => {
       if (!backgroundMessageHandler) {
         // eslint-disable-next-line no-console
         console.warn(

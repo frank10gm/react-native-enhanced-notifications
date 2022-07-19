@@ -2,7 +2,7 @@ module.exports = {
   dependency: {
     platforms: {
       android: {
-        packageImportPath: 'import it.enhancers.firebase.app.ReactNativeFirebaseAppPackage;',
+        packageImportPath: 'import it.enhancers.firebase.app.ReactNativeEnhancedNotificationsAppPackage;',
       },
       ios: {
         scriptPhases: [

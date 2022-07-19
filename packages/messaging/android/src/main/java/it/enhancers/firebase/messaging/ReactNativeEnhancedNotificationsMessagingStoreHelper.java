@@ -1,23 +1,23 @@
 package it.enhancers.firebase.messaging;
 
-public class ReactNativeFirebaseMessagingStoreHelper {
+public class ReactNativeEnhancedNotificationsMessagingStoreHelper {
 
-  private ReactNativeFirebaseMessagingStore messagingStore;
+  private ReactNativeEnhancedNotificationsMessagingStore messagingStore;
 
-  private ReactNativeFirebaseMessagingStoreHelper() {
-    messagingStore = new ReactNativeFirebaseMessagingStoreImpl();
+  private ReactNativeEnhancedNotificationsMessagingStoreHelper() {
+    messagingStore = new ReactNativeEnhancedNotificationsMessagingStoreImpl();
   }
 
-  private static ReactNativeFirebaseMessagingStoreHelper _instance;
+  private static ReactNativeEnhancedNotificationsMessagingStoreHelper _instance;
 
-  public static ReactNativeFirebaseMessagingStoreHelper getInstance() {
+  public static ReactNativeEnhancedNotificationsMessagingStoreHelper getInstance() {
     if (_instance == null) {
-      _instance = new ReactNativeFirebaseMessagingStoreHelper();
+      _instance = new ReactNativeEnhancedNotificationsMessagingStoreHelper();
     }
     return _instance;
   }
 
-  public ReactNativeFirebaseMessagingStore getMessagingStore() {
+  public ReactNativeEnhancedNotificationsMessagingStore getMessagingStore() {
     return messagingStore;
   }
 }

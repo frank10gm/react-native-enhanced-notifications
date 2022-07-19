@@ -24,28 +24,28 @@ import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableMap;
 import com.google.firebase.FirebaseApp;
 import it.enhancers.firebase.common.RCTConvertFirebase;
-import it.enhancers.firebase.common.ReactNativeFirebaseEvent;
-import it.enhancers.firebase.common.ReactNativeFirebaseEventEmitter;
-import it.enhancers.firebase.common.ReactNativeFirebaseJSON;
-import it.enhancers.firebase.common.ReactNativeFirebaseMeta;
-import it.enhancers.firebase.common.ReactNativeFirebaseModule;
-import it.enhancers.firebase.common.ReactNativeFirebasePreferences;
+import it.enhancers.firebase.common.ReactNativeEnhancedNotificationsEvent;
+import it.enhancers.firebase.common.ReactNativeEnhancedNotificationsEventEmitter;
+import it.enhancers.firebase.common.ReactNativeEnhancedNotificationsJSON;
+import it.enhancers.firebase.common.ReactNativeEnhancedNotificationsMeta;
+import it.enhancers.firebase.common.ReactNativeEnhancedNotificationsModule;
+import it.enhancers.firebase.common.ReactNativeEnhancedNotificationsPreferences;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ReactNativeFirebaseAppModule extends ReactNativeFirebaseModule {
+public class ReactNativeEnhancedNotificationsAppModule extends ReactNativeEnhancedNotificationsModule {
   private static final String TAG = "App";
 
-  ReactNativeFirebaseAppModule(ReactApplicationContext reactContext) {
+  ReactNativeEnhancedNotificationsAppModule(ReactApplicationContext reactContext) {
     super(reactContext, TAG);
   }
 
   @Override
   public void initialize() {
     super.initialize();
-    ReactNativeFirebaseEventEmitter.getSharedInstance().attachReactContext(getContext());
+    ReactNativeEnhancedNotificationsEventEmitter.getSharedInstance().attachReactContext(getContext());
   }
 
   @ReactMethod
@@ -76,34 +76,34 @@ public class ReactNativeFirebaseAppModule extends ReactNativeFirebaseModule {
 
   @ReactMethod
   public void eventsNotifyReady(Boolean ready) {
-    ReactNativeFirebaseEventEmitter emitter = ReactNativeFirebaseEventEmitter.getSharedInstance();
+    ReactNativeEnhancedNotificationsEventEmitter emitter = ReactNativeEnhancedNotificationsEventEmitter.getSharedInstance();
     emitter.notifyJsReady(ready);
   }
 
   @ReactMethod
   public void eventsGetListeners(Promise promise) {
-    ReactNativeFirebaseEventEmitter emitter = ReactNativeFirebaseEventEmitter.getSharedInstance();
+    ReactNativeEnhancedNotificationsEventEmitter emitter = ReactNativeEnhancedNotificationsEventEmitter.getSharedInstance();
     promise.resolve(emitter.getListenersMap());
   }
 
   @ReactMethod
   public void eventsPing(String eventName, ReadableMap eventBody, Promise promise) {
-    ReactNativeFirebaseEventEmitter emitter = ReactNativeFirebaseEventEmitter.getSharedInstance();
+    ReactNativeEnhancedNotificationsEventEmitter emitter = ReactNativeEnhancedNotificationsEventEmitter.getSharedInstance();
     emitter.sendEvent(
-        new ReactNativeFirebaseEvent(
+        new ReactNativeEnhancedNotificationsEvent(
             eventName, RCTConvertFirebase.readableMapToWritableMap(eventBody)));
     promise.resolve(RCTConvertFirebase.readableMapToWritableMap(eventBody));
   }
 
   @ReactMethod
   public void eventsAddListener(String eventName) {
-    ReactNativeFirebaseEventEmitter emitter = ReactNativeFirebaseEventEmitter.getSharedInstance();
+    ReactNativeEnhancedNotificationsEventEmitter emitter = ReactNativeEnhancedNotificationsEventEmitter.getSharedInstance();
     emitter.addListener(eventName);
   }
 
   @ReactMethod
   public void eventsRemoveListener(String eventName, Boolean all) {
-    ReactNativeFirebaseEventEmitter emitter = ReactNativeFirebaseEventEmitter.getSharedInstance();
+    ReactNativeEnhancedNotificationsEventEmitter emitter = ReactNativeEnhancedNotificationsEventEmitter.getSharedInstance();
     emitter.removeListener(eventName, all);
   }
 
@@ -120,36 +120,36 @@ public class ReactNativeFirebaseAppModule extends ReactNativeFirebaseModule {
   /** ------------------ META ------------------ */
   @ReactMethod
   public void metaGetAll(Promise promise) {
-    promise.resolve(ReactNativeFirebaseMeta.getSharedInstance().getAll());
+    promise.resolve(ReactNativeEnhancedNotificationsMeta.getSharedInstance().getAll());
   }
 
   /** ------------------ JSON ------------------ */
   @ReactMethod
   public void jsonGetAll(Promise promise) {
-    promise.resolve(ReactNativeFirebaseJSON.getSharedInstance().getAll());
+    promise.resolve(ReactNativeEnhancedNotificationsJSON.getSharedInstance().getAll());
   }
 
   /** ------------------ PREFERENCES ------------------ */
   @ReactMethod
   public void preferencesSetBool(String key, boolean value, Promise promise) {
-    ReactNativeFirebasePreferences.getSharedInstance().setBooleanValue(key, value);
+    ReactNativeEnhancedNotificationsPreferences.getSharedInstance().setBooleanValue(key, value);
     promise.resolve(null);
   }
 
   @ReactMethod
   public void preferencesSetString(String key, String value, Promise promise) {
-    ReactNativeFirebasePreferences.getSharedInstance().setStringValue(key, value);
+    ReactNativeEnhancedNotificationsPreferences.getSharedInstance().setStringValue(key, value);
     promise.resolve(null);
   }
 
   @ReactMethod
   public void preferencesGetAll(Promise promise) {
-    promise.resolve(ReactNativeFirebasePreferences.getSharedInstance().getAll());
+    promise.resolve(ReactNativeEnhancedNotificationsPreferences.getSharedInstance().getAll());
   }
 
   @ReactMethod
   public void preferencesClearAll(Promise promise) {
-    ReactNativeFirebasePreferences.getSharedInstance().clearAll();
+    ReactNativeEnhancedNotificationsPreferences.getSharedInstance().clearAll();
     promise.resolve(null);
   }
 
@@ -165,7 +165,7 @@ public class ReactNativeFirebaseAppModule extends ReactNativeFirebaseModule {
 
     constants.put("NATIVE_FIREBASE_APPS", appsList);
 
-    constants.put("FIREBASE_RAW_JSON", ReactNativeFirebaseJSON.getSharedInstance().getRawJSON());
+    constants.put("FIREBASE_RAW_JSON", ReactNativeEnhancedNotificationsJSON.getSharedInstance().getRawJSON());
 
     return constants;
   }
