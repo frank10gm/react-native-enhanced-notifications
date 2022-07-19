@@ -1,5 +1,5 @@
 {
-  "name": "react-native-firebase",
+  "name": "react-native-enhanced-notifications",
   "private": true,
   "scripts": {
     "version": "node ./scripts/version.js",
