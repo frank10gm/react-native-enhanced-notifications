@@ -1,6 +1,6 @@
 {
   "name": "@react-native-enhanced-notifications/messaging",
-  "version": "20.0.4",
+  "version": "20.0.5",
   "author": "francesco la placa",
   "description": "React Native Enhanced Notifications - derived from rn-firebase with the possibility to integrate third party notification providers",
   "main": "lib/index.js",
@@ -22,7 +22,7 @@
     "messaging"
   ],
   "peerDependencies": {
-    "@react-native-enhanced-notifications/app": "20.0.4"
+    "@react-native-enhanced-notifications/app": "20.0.5"
   },
   "publishConfig": {
     "access": "public"
