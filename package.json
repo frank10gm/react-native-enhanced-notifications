@@ -123,5 +123,27 @@
       "**/superstruct",
       "**/superstruct/**"
     ]
-  }
+  },
+  "description": "TODO",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frank10gm/react-native-enhanced-notifications.git"
+  },
+  "keywords": [
+    "notifications",
+    "react",
+    "native"
+  ],
+  "author": "francesco la placa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frank10gm/react-native-enhanced-notifications/issues"
+  },
+  "homepage": "https://github.com/frank10gm/react-native-enhanced-notifications#readme"
 }
