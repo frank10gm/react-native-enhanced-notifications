@@ -1,5 +1,5 @@
-import firebase from '@react-native-firebase/app';
-import * as messaging from '@react-native-firebase/messaging';
+import firebase from '@react-native-enhanced-notifications/app';
+import * as messaging from '@react-native-enhanced-notifications/messaging';
 
 console.log(messaging.default().app);
 

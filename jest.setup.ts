@@ -9,10 +9,10 @@ jest.doMock('react-native', () => {
       },
       NativeModules: {
         ...ReactNative.NativeModules,
-        RNFBAnalyticsModule: {
+        RNENAnalyticsModule: {
           logEvent: jest.fn(),
         },
-        RNFBAppModule: {
+        RNENAppModule: {
           NATIVE_FIREBASE_APPS: [
             {
               appConfig: {
@@ -34,7 +34,7 @@ jest.doMock('react-native', () => {
           eventsNotifyReady: jest.fn(),
           removeListeners: jest.fn(),
         },
-        RNFBAuthModule: {
+        RNENAuthModule: {
           APP_LANGUAGE: {
             '[DEFAULT]': 'en-US',
           },
@@ -45,20 +45,20 @@ jest.doMock('react-native', () => {
           addIdTokenListener: jest.fn(),
           useEmulator: jest.fn(),
         },
-        RNFBCrashlyticsModule: {},
-        RNFBDatabaseModule: {
+        RNENCrashlyticsModule: {},
+        RNENDatabaseModule: {
           on: jest.fn(),
           useEmulator: jest.fn(),
         },
-        RNFBFirestoreModule: {
+        RNENFirestoreModule: {
           settings: jest.fn(),
           documentSet: jest.fn(),
         },
-        RNFBMessagingModule: {
+        RNENMessagingModule: {
           onMessage: jest.fn(),
         },
-        RNFBPerfModule: {},
-        RNFBStorageModule: {
+        RNENPerfModule: {},
+        RNENStorageModule: {
           useEmulator: jest.fn(),
         },
       },

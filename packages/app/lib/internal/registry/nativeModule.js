@@ -18,7 +18,7 @@
 import { NativeModules, Platform } from 'react-native';
 import { APP_NATIVE_MODULE } from '../constants';
 import NativeFirebaseError from '../NativeFirebaseError';
-import RNFBNativeEventEmitter from '../RNFBNativeEventEmitter';
+import RNENNativeEventEmitter from '../RNENNativeEventEmitter';
 import SharedEventEmitter from '../SharedEventEmitter';
 
 const NATIVE_MODULE_REGISTRY = {};
@@ -150,7 +150,7 @@ function initialiseNativeModule(module) {
  */
 function subscribeToNativeModuleEvent(eventName) {
   if (!NATIVE_MODULE_EVENT_SUBSCRIPTIONS[eventName]) {
-    RNFBNativeEventEmitter.addListener(eventName, event => {
+    RNENNativeEventEmitter.addListener(eventName, event => {
       if (event.appName) {
         // native event has an appName property - auto prefix and internally emit
         SharedEventEmitter.emit(`${event.appName}-${eventName}`, event);
@@ -182,7 +182,7 @@ function getMissingModuleHelpText(namespace) {
     );
   }
 
-  const rnFirebasePackage = `'io.invertase.firebase.${namespace}.ReactNativeFirebase${nativeModule}Package'`;
+  const rnFirebasePackage = `'it.enhancers.firebase.${namespace}.ReactNativeFirebase${nativeModule}Package'`;
   const newInstance = `'new ReactNativeFirebase${nativeModule}Package()'`;
 
   return (

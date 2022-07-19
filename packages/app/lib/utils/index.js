@@ -21,7 +21,7 @@ import UtilsStatics from './UtilsStatics';
 
 const namespace = 'utils';
 const statics = UtilsStatics;
-const nativeModuleName = 'RNFBUtilsModule';
+const nativeModuleName = 'RNENUtilsModule';
 
 class FirebaseUtilsModule extends FirebaseModule {
   get isRunningInTestLab() {
@@ -77,7 +77,7 @@ class FirebaseUtilsModule extends FirebaseModule {
   }
 }
 
-// import { utils } from '@react-native-firebase/app';
+// import { utils } from '@react-native-enhanced-notifications/app';
 // utils().X(...);
 export default createModuleNamespace({
   statics,

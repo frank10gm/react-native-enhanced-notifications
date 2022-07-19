@@ -18,7 +18,7 @@
 describe('App -> NativeModules -> Constants', function () {
   describe('.apps', function () {
     it('should be an array', function () {
-      const { NATIVE_FIREBASE_APPS } = NativeModules.RNFBAppModule;
+      const { NATIVE_FIREBASE_APPS } = NativeModules.RNENAppModule;
 
       NATIVE_FIREBASE_APPS.should.be.an.Array();
       // secondaryFromNative + default
@@ -26,7 +26,7 @@ describe('App -> NativeModules -> Constants', function () {
     });
 
     it('array items contain name, options & state properties', function () {
-      const { NATIVE_FIREBASE_APPS } = NativeModules.RNFBAppModule;
+      const { NATIVE_FIREBASE_APPS } = NativeModules.RNENAppModule;
 
       NATIVE_FIREBASE_APPS.should.be.an.Array();
       NATIVE_FIREBASE_APPS.length.should.equal(2);

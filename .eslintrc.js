@@ -50,7 +50,7 @@ module.exports = {
   },
   globals: {
     __DEV__: true,
-    __RNFB__: true,
+    __RNEN__: true,
     firebase: true,
     should: true,
     Utils: true,

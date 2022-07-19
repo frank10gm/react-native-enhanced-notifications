@@ -33,7 +33,7 @@ export function modifyObjcAppDelegate(contents: string): string {
     !fallbackInvocationLineMatcher.test(contents)
   ) {
     WarningAggregator.addWarningIOS(
-      '@react-native-firebase/app',
+      '@react-native-enhanced-notifications/app',
       'Unable to determine correct Firebase insertion point in AppDelegate.m. Skipping Firebase addition.',
     );
     return contents;
@@ -42,7 +42,7 @@ export function modifyObjcAppDelegate(contents: string): string {
   // Add invocation
   try {
     return mergeContents({
-      tag: '@react-native-firebase/app-didFinishLaunchingWithOptions',
+      tag: '@react-native-enhanced-notifications/app-didFinishLaunchingWithOptions',
       src: contents,
       newSrc: methodInvocationBlock,
       anchor: methodInvocationLineMatcher,
@@ -56,7 +56,7 @@ export function modifyObjcAppDelegate(contents: string): string {
 
     // we fallback to another regex if the first one fails
     return mergeContents({
-      tag: '@react-native-firebase/app-didFinishLaunchingWithOptions-fallback',
+      tag: '@react-native-enhanced-notifications/app-didFinishLaunchingWithOptions-fallback',
       src: contents,
       newSrc: methodInvocationBlock,
       anchor: fallbackInvocationLineMatcher,

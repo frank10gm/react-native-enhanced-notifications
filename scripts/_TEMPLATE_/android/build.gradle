@@ -21,8 +21,8 @@ plugins {
 }
 
 def appProject
-if (findProject(':@react-native-firebase_app')) {
-  appProject = project(':@react-native-firebase_app')
+if (findProject(':@react-native-enhanced-notifications_app')) {
+  appProject = project(':@react-native-enhanced-notifications_app')
 } else if (findProject(':react-native-firebase_app')) {
   appProject = project(':react-native-firebase_app')
 } else {

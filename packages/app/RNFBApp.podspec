@@ -4,7 +4,7 @@ package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 firebase_sdk_version = package['sdkVersions']['ios']['firebase']
 
 Pod::Spec.new do |s|
-  s.name                = "RNFBApp"
+  s.name                = "RNENApp"
   s.version             = package["version"]
   s.description         = package["description"]
   s.summary             = <<-DESC

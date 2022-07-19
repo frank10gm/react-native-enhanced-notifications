@@ -55,7 +55,7 @@ function jsonBoolToYesNo () {
   fi
 }
 
-echo "info: -> RNFB build script started"
+echo "info: -> RNEN build script started"
 echo "info: 1) Locating ${_JSON_FILE_NAME} file:"
 
 if [[ -z ${_CURRENT_SEARCH_DIR} ]]; then
@@ -227,4 +227,4 @@ for plist in "${_TARGET_PLIST}" "${_DSYM_PLIST}" ; do
   fi
 done
 
-echo "info: <- RNFB build script finished"
+echo "info: <- RNEN build script finished"

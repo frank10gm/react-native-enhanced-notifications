@@ -550,7 +550,7 @@ google-services.json
 GoogleService-Info.plist
 
 # generated files
-RNFBVersion.m
+RNENVersion.m
 ReactNativeFirebaseVersion.java
 
 appPlaygrounds/

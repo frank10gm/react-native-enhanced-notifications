@@ -40,10 +40,10 @@ static void InitializeFlipper(UIApplication *application) {
 #if defined(FB_SONARKIT_ENABLED) && __has_include(<FlipperKit/FlipperClient.h>)
   InitializeFlipper(application);
 #endif
-  
-// @generated begin @react-native-firebase/app-didFinishLaunchingWithOptions - expo prebuild (DO NOT MODIFY) sync-ecd111c37e49fdd1ed6354203cd6b1e2a38cccda
+
+// @generated begin @react-native-enhanced-notifications/app-didFinishLaunchingWithOptions - expo prebuild (DO NOT MODIFY) sync-ecd111c37e49fdd1ed6354203cd6b1e2a38cccda
 [FIRApp configure];
-// @generated end @react-native-firebase/app-didFinishLaunchingWithOptions
+// @generated end @react-native-enhanced-notifications/app-didFinishLaunchingWithOptions
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge moduleName:@\\"main\\" initialProperties:nil];
   id rootViewBackgroundColor = [[NSBundle mainBundle] objectForInfoDictionaryKey:@\\"RCTRootViewBackgroundColor\\"];
@@ -133,10 +133,10 @@ static void InitializeFlipper(UIApplication *application) {
 #if defined(FB_SONARKIT_ENABLED) && __has_include(<FlipperKit/FlipperClient.h>)
   InitializeFlipper(application);
 #endif
-  
-// @generated begin @react-native-firebase/app-didFinishLaunchingWithOptions - expo prebuild (DO NOT MODIFY) sync-ecd111c37e49fdd1ed6354203cd6b1e2a38cccda
+
+// @generated begin @react-native-enhanced-notifications/app-didFinishLaunchingWithOptions - expo prebuild (DO NOT MODIFY) sync-ecd111c37e49fdd1ed6354203cd6b1e2a38cccda
 [FIRApp configure];
-// @generated end @react-native-firebase/app-didFinishLaunchingWithOptions
+// @generated end @react-native-enhanced-notifications/app-didFinishLaunchingWithOptions
   RCTBridge *bridge = [self.reactDelegate createBridgeWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [self.reactDelegate createRootViewWithBridge:bridge moduleName:@\\"main\\" initialProperties:nil];
   rootView.backgroundColor = [UIColor whiteColor];
@@ -201,15 +201,15 @@ exports[`Config Plugin iOS Tests tests changes made to AppDelegate.m with fallba
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-// @generated begin @react-native-firebase/app-didFinishLaunchingWithOptions-fallback - expo prebuild (DO NOT MODIFY) sync-ecd111c37e49fdd1ed6354203cd6b1e2a38cccda
+// @generated begin @react-native-enhanced-notifications/app-didFinishLaunchingWithOptions-fallback - expo prebuild (DO NOT MODIFY) sync-ecd111c37e49fdd1ed6354203cd6b1e2a38cccda
 [FIRApp configure];
-// @generated end @react-native-firebase/app-didFinishLaunchingWithOptions-fallback
+// @generated end @react-native-enhanced-notifications/app-didFinishLaunchingWithOptions-fallback
 
 // The generated code should appear above ^^^
 #if defined(FB_SONARKIT_ENABLED) && __has_include(<FlipperKit/FlipperClient.h>)
   InitializeFlipper(application);
 #endif
-  
+
   // the line below is malfolmed not to be matched by the Expo plugin regex
   // RCTBridge* briddge = [RCTBridge new];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:briddge moduleName:@\\"main\\" initialProperties:nil];
@@ -286,10 +286,10 @@ static void InitializeFlipper(UIApplication *application) {
 #if defined(FB_SONARKIT_ENABLED) && __has_include(<FlipperKit/FlipperClient.h>)
   InitializeFlipper(application);
 #endif
-  
-// @generated begin @react-native-firebase/app-didFinishLaunchingWithOptions - expo prebuild (DO NOT MODIFY) sync-ecd111c37e49fdd1ed6354203cd6b1e2a38cccda
+
+// @generated begin @react-native-enhanced-notifications/app-didFinishLaunchingWithOptions - expo prebuild (DO NOT MODIFY) sync-ecd111c37e49fdd1ed6354203cd6b1e2a38cccda
 [FIRApp configure];
-// @generated end @react-native-firebase/app-didFinishLaunchingWithOptions
+// @generated end @react-native-enhanced-notifications/app-didFinishLaunchingWithOptions
   self.moduleRegistryAdapter = [[UMModuleRegistryAdapter alloc] initWithModuleRegistryProvider:[[UMModuleRegistryProvider alloc] init]];
   self.launchOptions = launchOptions;
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -386,9 +386,9 @@ exports[`Config Plugin iOS Tests works with AppDelegate.mm (RN 0.68+) 1`] = `
 {
   RCTAppSetupPrepareApp(application);
 
-// @generated begin @react-native-firebase/app-didFinishLaunchingWithOptions - expo prebuild (DO NOT MODIFY) sync-ecd111c37e49fdd1ed6354203cd6b1e2a38cccda
+// @generated begin @react-native-enhanced-notifications/app-didFinishLaunchingWithOptions - expo prebuild (DO NOT MODIFY) sync-ecd111c37e49fdd1ed6354203cd6b1e2a38cccda
 [FIRApp configure];
-// @generated end @react-native-firebase/app-didFinishLaunchingWithOptions
+// @generated end @react-native-enhanced-notifications/app-didFinishLaunchingWithOptions
   RCTBridge *bridge = [self.reactDelegate createBridgeWithDelegate:self launchOptions:launchOptions];
 
 #if RCT_NEW_ARCH_ENABLED

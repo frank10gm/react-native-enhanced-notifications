@@ -70,8 +70,8 @@ inquirer
       return file.includes('_template_') || file.includes('_Template_');
     });
 
-    shelljs.mv(`${dir}/ios/RNFB_Template_`, `${dir}/ios/RNFB${nameUpper}`);
-    shelljs.mv(`${dir}/ios/RNFB_Template_.xcodeproj`, `${dir}/ios/RNFB${nameUpper}.xcodeproj`);
+    shelljs.mv(`${dir}/ios/RNEN_Template_`, `${dir}/ios/RNEN${nameUpper}`);
+    shelljs.mv(`${dir}/ios/RNEN_Template_.xcodeproj`, `${dir}/ios/RNEN${nameUpper}.xcodeproj`);
     shelljs.mv(
       `${dir}/android/src/main/java/io/invertase/firebase/_template_`,
       `${dir}/android/src/main/java/io/invertase/firebase/${name}`,
@@ -83,8 +83,8 @@ inquirer
           `${dir}/android/src/main/java/io/invertase/firebase/_template_`,
           `${dir}/android/src/main/java/io/invertase/firebase/${name}`,
         )
-        .replace(`${dir}/ios/RNFB_Template_/`, `${dir}/ios/RNFB${nameUpper}/`)
-        .replace(`${dir}/ios/RNFB_Template_.x`, `${dir}/ios/RNFB${nameUpper}.x`);
+        .replace(`${dir}/ios/RNEN_Template_/`, `${dir}/ios/RNEN${nameUpper}/`)
+        .replace(`${dir}/ios/RNEN_Template_.x`, `${dir}/ios/RNEN${nameUpper}.x`);
       const newTemplateFilePath = templateFile
         .replace(/_template_/g, name)
         .replace(/_Template_/g, nameUpper);
@@ -93,7 +93,7 @@ inquirer
     return Promise.resolve({ name, nameUpper });
   })
   .then(({ name, nameUpper }) => {
-    shelljs.exec(`lerna add @react-native-firebase/${name} tests && yarn`);
+    shelljs.exec(`lerna add @react-native-enhanced-notifications/${name} tests && yarn`);
     console.log('');
     console.log(`The module '${name}' (${nameUpper}) has been created!`);
     console.log('');

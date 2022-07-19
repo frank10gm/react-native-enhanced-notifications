@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const version = require('../lib/version');
-const outputPath = path.resolve(__dirname, '..', 'ios', 'RNFBApp', 'RNFBVersion.m');
+const outputPath = path.resolve(__dirname, '..', 'ios', 'RNENApp', 'RNENVersion.m');
 const template = `/**
  * Copyright (c) 2016-present Invertase Limited & Contributors
  *
@@ -23,7 +23,7 @@ const template = `/**
 #import <React/RCTVersion.h>
 
 // generated file - do not modify or commit
-NSString* const RNFBVersionString = @"VERSION";
+NSString* const RNENVersionString = @"VERSION";
 `;
 
 fs.writeFileSync(outputPath, template.replace('@"VERSION"', `@"${version}"`), 'utf8');

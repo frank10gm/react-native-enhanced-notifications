@@ -24,7 +24,7 @@ const eventBody = {
 describe('Core -> EventEmitter', function () {
   describe('ReactNativeFirebaseEventEmitter', function () {
     it('queues events before app is ready', async function () {
-      const { eventsPing, eventsNotifyReady, eventsGetListeners } = NativeModules.RNFBAppModule;
+      const { eventsPing, eventsNotifyReady, eventsGetListeners } = NativeModules.RNENAppModule;
       await eventsNotifyReady(false);
 
       let readyToResolve = false;
@@ -59,7 +59,7 @@ describe('Core -> EventEmitter', function () {
 
     it('queues events before a js listener is registered', async function () {
       const { eventsPing, eventsNotifyReady, eventsGetListeners, eventsRemoveListener } =
-        NativeModules.RNFBAppModule;
+        NativeModules.RNENAppModule;
       await eventsNotifyReady(true);
       const { resolve, promise } = Promise.defer();
       const emitter = NativeEventEmitter;

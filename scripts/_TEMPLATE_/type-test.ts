@@ -1,5 +1,5 @@
-import firebase from '@react-native-firebase/app';
-import defaultExport, { firebase as firebaseFromModule } from '@react-native-firebase/_template_';
+import firebase from '@react-native-enhanced-notifications/app';
+import defaultExport, { firebase as firebaseFromModule } from '@react-native-enhanced-notifications/_template_';
 
 // checks module exists at root
 console.log(firebase._template_().app.name);

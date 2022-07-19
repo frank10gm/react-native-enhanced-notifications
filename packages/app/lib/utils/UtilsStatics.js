@@ -60,6 +60,6 @@ function processPathConstants(nativeModule) {
 export default {
   SDK_VERSION: require('./../version'),
   get FilePath() {
-    return processPathConstants(NativeModules.RNFBUtilsModule);
+    return processPathConstants(NativeModules.RNENUtilsModule);
   },
 };

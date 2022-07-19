@@ -1,8 +1,8 @@
 {
-  "name": "@react-native-firebase/_template_",
+  "name": "@react-native-enhanced-notifications/_template_",
   "version": "_VERSION_",
-  "author": "Invertase <oss@invertase.io> (http://invertase.io)",
-  "description": "React Native Firebase - _Template_",
+  "author": "francesco la placa",
+  "description": "React Native Enhanced Notifications - _Template_",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/invertase/react-native-firebase/tree/main/packages/_template_"
+    "url": "https://github.com/frank10gm/react-native-enhanced-notifications/tree/main/packages/_template_"
   },
   "license": "Apache-2.0",
   "keywords": [
@@ -22,7 +22,7 @@
     "_template_"
   ],
   "peerDependencies": {
-    "@react-native-firebase/app": "_VERSION_"
+    "@react-native-enhanced-notifications/app": "_VERSION_"
   },
   "publishConfig": {
     "access": "public"

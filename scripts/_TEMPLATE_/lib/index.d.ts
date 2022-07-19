@@ -15,7 +15,7 @@
  *
  */
 
-import { ReactNativeFirebase } from '@react-native-firebase/app';
+import { ReactNativeFirebase } from '@react-native-enhanced-notifications/app';
 
 /**
  * Firebase _Template_ package for React Native.
@@ -25,7 +25,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * Access the firebase export from the `_template_` package:
  *
  * ```js
- * import { firebase } from '@react-native-firebase/_template_';
+ * import { firebase } from '@react-native-enhanced-notifications/_template_';
  *
  * // firebase._template_().X
  * ```
@@ -35,7 +35,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * Using the default export from the `_template_` package:
  *
  * ```js
- * import _template_ from '@react-native-firebase/_template_';
+ * import _template_ from '@react-native-enhanced-notifications/_template_';
  *
  * // _template_().X
  * ```
@@ -45,8 +45,8 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * Using the default export from the `app` package:
  *
  * ```js
- * import firebase from '@react-native-firebase/app';
- * import '@react-native-firebase/_template_';
+ * import firebase from '@react-native-enhanced-notifications/app';
+ * import '@react-native-enhanced-notifications/_template_';
  *
  * // firebase._template_().X
  * ```
@@ -120,7 +120,7 @@ export default defaultExport;
 /**
  * Attach namespace to `firebase.` and `FirebaseApp.`.
  */
-declare module '@react-native-firebase/app' {
+declare module '@react-native-enhanced-notifications/app' {
   namespace ReactNativeFirebase {
     import FirebaseModuleWithStaticsAndApp = ReactNativeFirebase.FirebaseModuleWithStaticsAndApp;
     interface Module {

@@ -143,7 +143,7 @@ reCAPTCHA
 remarketing
 RN60
 RN61
-RNFB
+RNEN
 RNFirebase
 SafetyNet
 Salakar

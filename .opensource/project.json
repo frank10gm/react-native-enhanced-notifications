@@ -1,8 +1,7 @@
 {
-  "name": "React Native Firebase",
+  "name": "React Native Enhanced Notifications",
   "type": "library",
   "platforms": ["Android", "iOS"],
   "content": "README.md",
-  "pages": ["CONTRIBUTING.md", "CODE_OF_CONDUCT.md"],
-  "related": ["invertase/react-native-firebase-starter"]
+  "pages": ["CONTRIBUTING.md", "CODE_OF_CONDUCT.md"]
 }

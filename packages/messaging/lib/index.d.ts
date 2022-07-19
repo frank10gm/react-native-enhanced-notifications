@@ -15,7 +15,7 @@
  *
  */
 
-import { ReactNativeFirebase } from '@react-native-firebase/app';
+import { ReactNativeFirebase } from '@react-native-enhanced-notifications/app';
 
 /**
  * Firebase Messaging package for React Native.
@@ -25,7 +25,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * Access the firebase export from the `messaging` package:
  *
  * ```js
- * import { firebase } from '@react-native-firebase/messaging';
+ * import { firebase } from '@react-native-enhanced-notifications/messaging';
  *
  * // firebase.messaging().X
  * ```
@@ -35,7 +35,7 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * Using the default export from the `messaging` package:
  *
  * ```js
- * import messaging from '@react-native-firebase/messaging';
+ * import messaging from '@react-native-enhanced-notifications/messaging';
  *
  * // messaging().X
  * ```
@@ -45,8 +45,8 @@ import { ReactNativeFirebase } from '@react-native-firebase/app';
  * Using the default export from the `app` package:
  *
  * ```js
- * import firebase from '@react-native-firebase/app';
- * import '@react-native-firebase/messaging';
+ * import firebase from '@react-native-enhanced-notifications/app';
+ * import '@react-native-enhanced-notifications/messaging';
  *
  * // firebase.messaging().X
  * ```
@@ -1008,7 +1008,7 @@ export default defaultExport;
 /**
  * Attach namespace to `firebase.` and `FirebaseApp.`.
  */
-declare module '@react-native-firebase/app' {
+declare module '@react-native-enhanced-notifications/app' {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   namespace ReactNativeFirebase {
     import FirebaseModuleWithStatics = ReactNativeFirebase.FirebaseModuleWithStatics;

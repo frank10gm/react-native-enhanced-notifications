@@ -24,12 +24,12 @@ import {
   isObject,
   isString,
   isUndefined,
-} from '@react-native-firebase/app/lib/common';
+} from '@react-native-enhanced-notifications/app/lib/common';
 import {
   createModuleNamespace,
   FirebaseModule,
   getFirebaseRoot,
-} from '@react-native-firebase/app/lib/internal';
+} from '@react-native-enhanced-notifications/app/lib/internal';
 import { AppRegistry } from 'react-native';
 import remoteMessageOptions from './remoteMessageOptions';
 import version from './version';
@@ -57,7 +57,7 @@ const statics = {
 
 const namespace = 'messaging';
 
-const nativeModuleName = 'RNFBMessagingModule';
+const nativeModuleName = 'RNENMessagingModule';
 
 let backgroundMessageHandler;
 let openSettingsForNotificationHandler;
@@ -430,10 +430,10 @@ class FirebaseMessagingModule extends FirebaseModule {
   }
 }
 
-// import { SDK_VERSION } from '@react-native-firebase/messaging';
+// import { SDK_VERSION } from '@react-native-enhanced-notifications/messaging';
 export const SDK_VERSION = version;
 
-// import messaging from '@react-native-firebase/messaging';
+// import messaging from '@react-native-enhanced-notifications/messaging';
 // messaging().X(...);
 export default createModuleNamespace({
   statics,
@@ -456,7 +456,7 @@ export default createModuleNamespace({
   ModuleClass: FirebaseMessagingModule,
 });
 
-// import messaging, { firebase } from '@react-native-firebase/messaging';
+// import messaging, { firebase } from '@react-native-enhanced-notifications/messaging';
 // messaging().X(...);
 // firebase.messaging().X(...);
 export const firebase = getFirebaseRoot();

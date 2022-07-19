@@ -15,7 +15,7 @@
  *
  */
 
-export const APP_NATIVE_MODULE = 'RNFBAppModule';
+export const APP_NATIVE_MODULE = 'RNENAppModule';
 
 export const DEFAULT_APP_NAME = '[DEFAULT]';
 
