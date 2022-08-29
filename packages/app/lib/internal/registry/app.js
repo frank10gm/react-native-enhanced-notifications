@@ -23,7 +23,7 @@ import {
   isUndefined,
 } from '@react-native-enhanced-notifications/app/lib/common';
 import FirebaseApp from '../../FirebaseApp';
-import { DEFAULT_APP_NAME } from '../constants';
+import { DEFAULT_HON_APP_NAME } from '../constants';
 import { getAppModule } from './nativeModule';
 
 const APP_REGISTRY = {};
@@ -80,7 +80,7 @@ export function initializeNativeApps() {
  *
  * @param name
  */
-export function getApp(name = DEFAULT_APP_NAME) {
+export function getApp(name = DEFAULT_HON_APP_NAME) {
   if (!initializedNativeApps) {
     initializeNativeApps();
   }
@@ -120,7 +120,7 @@ export function initializeApp(options = {}, configOrName) {
   }
 
   if (isUndefined(appConfig.name)) {
-    appConfig.name = DEFAULT_APP_NAME;
+    appConfig.name = DEFAULT_HON_APP_NAME;
   }
 
   const { name } = appConfig;
@@ -210,7 +210,7 @@ export function setLogLevel(logLevel) {
  *
  */
 export function deleteApp(name, nativeInitialized) {
-  if (name === DEFAULT_APP_NAME && nativeInitialized) {
+  if (name === DEFAULT_HON_APP_NAME && nativeInitialized) {
     return Promise.reject(new Error('Unable to delete the default native firebase app instance.'));
   }
 

@@ -177,7 +177,7 @@ RCT_EXPORT_METHOD(initializeApp
     NSString *appName = [appConfig valueForKey:@"name"];
 
     @try {
-      if (!appName || [appName isEqualToString:DEFAULT_APP_DISPLAY_NAME]) {
+      if (!appName || [appName isEqualToString:DEFAULT_HON_APP_DISPLAY_NAME]) {
         [FIRApp configureWithOptions:firOptions];
         firApp = [FIRApp defaultApp];
       } else {

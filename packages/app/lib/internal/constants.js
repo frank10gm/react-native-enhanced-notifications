@@ -17,7 +17,7 @@
 
 export const APP_NATIVE_MODULE = 'RNENAppModule';
 
-export const DEFAULT_APP_NAME = '[DEFAULT]';
+export const DEFAULT_HON_APP_NAME = '[DEFAULT]';
 
 export const KNOWN_NAMESPACES = [
   'appCheck',

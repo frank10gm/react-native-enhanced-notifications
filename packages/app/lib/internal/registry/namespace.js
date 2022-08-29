@@ -18,7 +18,7 @@
 import { isString } from '@react-native-enhanced-notifications/app/lib/common';
 import FirebaseApp from '../../FirebaseApp';
 import SDK_VERSION from '../../version';
-import { DEFAULT_APP_NAME, KNOWN_NAMESPACES } from '../constants';
+import { DEFAULT_HON_APP_NAME, KNOWN_NAMESPACES } from '../constants';
 import FirebaseModule from '../FirebaseModule';
 import {
   getApp,
@@ -82,7 +82,7 @@ function getOrCreateModuleForApp(app, moduleNamespace) {
     NAMESPACE_REGISTRY[moduleNamespace];
 
   // modules such as analytics only run on the default app
-  if (!hasMultiAppSupport && app.name !== DEFAULT_APP_NAME) {
+  if (!hasMultiAppSupport && app.name !== DEFAULT_HON_APP_NAME) {
     throw new Error(
       [
         `You attempted to call "firebase.app('${app.name}').${moduleNamespace}" but; ${moduleNamespace} does not support multiple Firebase Apps.`,
@@ -152,7 +152,7 @@ function getOrCreateModuleForRoot(moduleNamespace) {
     }
 
     // modules such as analytics only run on the default app
-    if (!hasMultiAppSupport && _app.name !== DEFAULT_APP_NAME) {
+    if (!hasMultiAppSupport && _app.name !== DEFAULT_HON_APP_NAME) {
       throw new Error(
         [
           `You attempted to call "firebase.${moduleNamespace}(app)" but; ${moduleNamespace} does not support multiple Firebase Apps.`,

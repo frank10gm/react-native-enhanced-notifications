@@ -24,8 +24,8 @@
 #pragma mark -
 #pragma mark Constants
 
-NSString *const DEFAULT_APP_DISPLAY_NAME = @"[DEFAULT]";
-NSString *const DEFAULT_APP_NAME = @"__FIRAPP_DEFAULT";
+NSString *const DEFAULT_HON_APP_DISPLAY_NAME = @"[DEFAULT]";
+NSString *const DEFAULT_HON_APP_NAME = @"__FIRAPP_DEFAULT";
 
 @implementation RNENSharedUtils
 static NSString *const RNENErrorDomain = @"RNENErrorDomain";
@@ -34,8 +34,8 @@ static NSString *const RNENErrorDomain = @"RNENErrorDomain";
 #pragma mark Methods
 
 + (NSString *)getAppJavaScriptName:(NSString *)appDisplayName {
-  if ([appDisplayName isEqualToString:DEFAULT_APP_NAME]) {
-    return DEFAULT_APP_DISPLAY_NAME;
+  if ([appDisplayName isEqualToString:DEFAULT_HON_APP_NAME]) {
+    return DEFAULT_HON_APP_DISPLAY_NAME;
   }
   return appDisplayName;
 }
@@ -47,8 +47,8 @@ static NSString *const RNENErrorDomain = @"RNENErrorDomain";
   NSMutableDictionary *firAppConfig = [NSMutableDictionary new];
 
   NSString *name = [firApp name];
-  if ([name isEqualToString:DEFAULT_APP_NAME]) {
-    name = DEFAULT_APP_DISPLAY_NAME;
+  if ([name isEqualToString:DEFAULT_HON_APP_NAME]) {
+    name = DEFAULT_HON_APP_DISPLAY_NAME;
   }
 
   firAppConfig[@"name"] = name;

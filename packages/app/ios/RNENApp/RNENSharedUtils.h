@@ -32,8 +32,8 @@
 #pragma mark -
 #pragma mark Constants
 
-extern NSString *const DEFAULT_APP_DISPLAY_NAME;
-extern NSString *const DEFAULT_APP_NAME;
+extern NSString *const DEFAULT_HON_APP_DISPLAY_NAME;
+extern NSString *const DEFAULT_HON_APP_NAME;
 
 @interface RNENSharedUtils : NSObject
 

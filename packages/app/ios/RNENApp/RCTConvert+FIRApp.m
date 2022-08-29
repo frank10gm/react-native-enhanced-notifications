@@ -20,7 +20,7 @@
 
 @implementation RCTConvert (FIRApp)
 + (FIRApp *)firAppFromString:(NSString *)appName {
-  if ([appName isEqualToString:DEFAULT_APP_DISPLAY_NAME]) {
+  if ([appName isEqualToString:DEFAULT_HON_APP_DISPLAY_NAME]) {
     return [FIRApp defaultApp];
   }
 
