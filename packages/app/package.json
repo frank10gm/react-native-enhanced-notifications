@@ -1,6 +1,6 @@
 {
   "name": "@react-native-enhanced-notifications/app",
-  "version": "20.0.8",
+  "version": "20.0.9",
   "author": "enhancers",
   "description": "React Native Enhanced Notifications",
   "main": "lib/index.js",

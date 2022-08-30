@@ -18,4 +18,4 @@
 #import <React/RCTVersion.h>
 
 // generated file - do not modify or commit
-NSString* const RNENVersionString = @"20.0.8";
+NSString* const RNENVersionString = @"20.0.9";
