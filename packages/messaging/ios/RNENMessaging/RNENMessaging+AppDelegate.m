@@ -129,7 +129,7 @@
       postNotificationName:@"RNENMessagingDidReceiveRemoteNotification"
                     object:userInfo];
 
-  if (userInfo[@"gcm.message_id"]) {
+  if (userInfo[@"gcm.message_id"] || [userInfo[@"_sid"] isEqualToString:@"SFMC"]) {
     DLog(@"didReceiveRemoteNotification gcm.message_id was present %@", userInfo);
 
     if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {

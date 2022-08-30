@@ -152,7 +152,7 @@ struct {
     didReceiveNotificationResponse:(UNNotificationResponse *)response
              withCompletionHandler:(void (^)(void))completionHandler {
   NSDictionary *remoteNotification = response.notification.request.content.userInfo;
-  if (remoteNotification[@"gcm.message_id"]) {
+  if (remoteNotification[@"gcm.message_id"] || [remoteNotification[@"_sid"] isEqualToString:@"SFMC"]) {
     NSDictionary *notificationDict =
         [RNENMessagingSerializer remoteMessageUserInfoToDict:remoteNotification];
     [[RNENRCTEventEmitter shared] sendEventWithName:@"messaging_notification_opened"
