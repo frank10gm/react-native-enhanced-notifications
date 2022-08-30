@@ -56,8 +56,6 @@ public class ReactNativeEnhancedNotificationsMessagingReceiver extends Broadcast
                                  Context context,
                                  RemoteMessage remoteMessage
   ) {
-    final int NOTIFY_ID = 1002;
-
     String name = "MKT Channel";
     String id = "mkt-channel";
     String description = "MKT Cloud notification channel";
