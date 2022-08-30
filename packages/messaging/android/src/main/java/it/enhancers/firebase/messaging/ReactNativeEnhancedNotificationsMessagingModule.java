@@ -74,22 +74,38 @@ public class ReactNativeEnhancedNotificationsMessagingModule extends ReactNative
           if (messageId == null) messageId = intent.getExtras().getString("message_id");
 
           // only handle non-consumed initial notifications
-          if (messageId != null && initialNotificationMap.get(messageId) == null) {
-            WritableMap remoteMessageMap;
-            RemoteMessage remoteMessage =
+          if(messageId != null){
+            if (initialNotificationMap.get(messageId) == null) {
+              WritableMap remoteMessageMap;
+              RemoteMessage remoteMessage =
                 ReactNativeEnhancedNotificationsMessagingReceiver.notifications.get(messageId);
-            if (remoteMessage == null) {
-              remoteMessageMap = popRemoteMessageMapFromMessagingStore(messageId);
-            } else {
-              remoteMessageMap =
+              if (remoteMessage == null) {
+                remoteMessageMap = popRemoteMessageMapFromMessagingStore(messageId);
+              } else {
+                remoteMessageMap =
                   ReactNativeEnhancedNotificationsMessagingSerializer.remoteMessageToWritableMap(remoteMessage);
+              }
+              if (remoteMessageMap != null) {
+                promise.resolve(remoteMessageMap);
+                initialNotificationMap.put(messageId, true);
+                return;
+              }
             }
-            if (remoteMessageMap != null) {
-              promise.resolve(remoteMessageMap);
-              initialNotificationMap.put(messageId, true);
-              return;
+          }else{
+            RemoteMessage remoteMessage = intent.getParcelableExtra("message");
+
+            if(remoteMessage != null){
+              WritableMap remoteMessageMap =
+                ReactNativeEnhancedNotificationsMessagingSerializer.remoteMessageToWritableMap(remoteMessage);
+
+              ReactNativeEnhancedNotificationsEventEmitter emitter =
+                ReactNativeEnhancedNotificationsEventEmitter.getSharedInstance();
+              emitter.sendEvent(
+                ReactNativeEnhancedNotificationsMessagingSerializer.remoteMessageMapToEvent(
+                  remoteMessageMap, true));
             }
           }
+
         }
       } else {
         Log.w(
