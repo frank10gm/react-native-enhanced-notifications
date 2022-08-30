@@ -265,6 +265,19 @@ public class ReactNativeEnhancedNotificationsMessagingModule extends ReactNative
               ReactNativeEnhancedNotificationsMessagingSerializer.remoteMessageMapToEvent(
                   remoteMessageMap, true));
         }
+      }else{
+        RemoteMessage remoteMessage = intent.getParcelableExtra("message");
+
+        if(remoteMessage != null){
+          WritableMap remoteMessageMap =
+            ReactNativeEnhancedNotificationsMessagingSerializer.remoteMessageToWritableMap(remoteMessage);
+
+          ReactNativeEnhancedNotificationsEventEmitter emitter =
+            ReactNativeEnhancedNotificationsEventEmitter.getSharedInstance();
+          emitter.sendEvent(
+            ReactNativeEnhancedNotificationsMessagingSerializer.remoteMessageMapToEvent(
+              remoteMessageMap, true));
+        }
       }
     }
   }
