@@ -136,7 +136,8 @@ public class ReactNativeEnhancedNotificationsMessagingReceiver extends Broadcast
     }
 
     Notification notification = builder.build();
-    notifManager.notify(NOTIFY_ID, notification);
+    int oneTimeID = (int) SystemClock.uptimeMillis();
+    notifManager.notify(oneTimeID, notification);
   }
 
   @Override
