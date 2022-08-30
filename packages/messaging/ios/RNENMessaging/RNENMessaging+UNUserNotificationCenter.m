@@ -127,7 +127,7 @@ struct {
     presentationOptions |= UNNotificationPresentationOptionAlert;
   }
 
-  if (notification.request.content.userInfo[@"gcm.message_id"]) {
+  if (notification.request.content.userInfo[@"gcm.message_id"] || [notification.request.content.userInfo[@"_sid"] isEqualToString:@"SFMC"]) {
     NSDictionary *notificationDict = [RNENMessagingSerializer notificationToDict:notification];
 
     // Don't send an event if contentAvailable is true - application:didReceiveRemoteNotification
