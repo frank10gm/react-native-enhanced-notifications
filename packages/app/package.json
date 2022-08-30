@@ -1,8 +1,8 @@
 {
   "name": "@react-native-enhanced-notifications/app",
   "version": "20.0.8",
-  "author": "francesco la placa",
-  "description": "React Native Enhanced Notifications - derived from rn-firebase with the possibility to integrate third party notification providers",
+  "author": "enhancers",
+  "description": "React Native Enhanced Notifications",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {

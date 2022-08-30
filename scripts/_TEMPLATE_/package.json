@@ -1,7 +1,7 @@
 {
   "name": "@react-native-enhanced-notifications/_template_",
   "version": "_VERSION_",
-  "author": "francesco la placa",
+  "author": "enhancers",
   "description": "React Native Enhanced Notifications - _Template_",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
