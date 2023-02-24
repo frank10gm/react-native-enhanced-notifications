@@ -96,7 +96,7 @@ public class ReactNativeEnhancedNotificationsMessagingReceiver extends Broadcast
       intent = new Intent(context, getMainActivityClass(context));
       intent.putExtra("message", remoteMessage);
       intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-      pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE);
+      pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
 
 
       builder.setContentTitle(title)  // required
@@ -118,7 +118,7 @@ public class ReactNativeEnhancedNotificationsMessagingReceiver extends Broadcast
       intent = new Intent(context, getMainActivityClass(context));
       intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
       intent.putExtra("message", remoteMessage);
-      pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE);
+      pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
 
       builder.setContentTitle(title)                           // required
         .setSmallIcon(context
